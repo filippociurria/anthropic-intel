@@ -4,10 +4,25 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 
 ---
 
+## Automation & Scheduling
+
+| Situation | Feature | Date |
+|-----------|---------|------|
+| Schedule recurring tasks (tests, audits, syncs) without keeping a laptop on | Claude Code Routines | 2026-04-14 |
+| Trigger repo-wide automations on a cron or event | Claude Code Routines | 2026-04-14 |
+| Prevent context compaction from dropping critical tool results mid-task | PreCompact Hook | 2026-04-13 |
+| Keep prompts cached for an hour across a long agent session | `ENABLE_PROMPT_CACHING_1H` | 2026-04-14 |
+
 ## Development & API
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Manage multiple agent tasks on parallel branches simultaneously | Claude Code Parallel Sessions | 2026-04-14 |
+| Monitor a deploy in one pane while coding in another | Claude Code Parallel Sessions | 2026-04-14 |
+| Resume a complex session the next day without losing context | Session Recap (`/recap`) | 2026-04-14 |
+| Hand off a session's context to a teammate | Session Recap (`/recap`) | 2026-04-14 |
+| Audit codebase for deprecated model strings before a deadline | Sonnet 4 / Opus 4 Deprecation | 2026-04-14 |
+| Plan migration from Claude Sonnet 4 or Opus 4 before June 15, 2026 | Sonnet 4 / Opus 4 Deprecation | 2026-04-14 |
 | Scripting Claude API calls from the terminal | ant CLI | 2026-04-08 |
 | Versioning prompts and API configs in YAML | ant CLI | 2026-04-08 |
 | Integrating Claude into CI/CD pipelines | ant CLI | 2026-04-08 |

@@ -4,6 +4,42 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Claude Code Routines — 2026-04-14
+- **What**: Cloud-based scheduled automations (cron or event-triggered) that run on Claude Code's web infrastructure even when your local machine is offline
+- **Situations**: scheduling nightly dependency audits or test runs, triggering repo-wide tasks on a schedule without a laptop staying awake, packaging and reusing automations across repos via connectors
+- **Tags**: [automation, dev]
+- **Source**: https://code.claude.com/docs/en/routines
+
+## Claude Code Parallel Sessions & Desktop Redesign — 2026-04-14
+- **What**: Run multiple Claude Code sessions side-by-side from one window with a new sidebar manager, plus an integrated terminal, file editor, HTML/PDF preview, and drag-and-drop layout
+- **Situations**: managing separate agent tasks on parallel feature branches simultaneously, monitoring a deploy in one pane while editing code in another, comparing two Claude conversations side by side
+- **Tags**: [dev, automation]
+- **Source**: https://siliconangle.com/2026/04/14/anthropics-claude-code-gets-automated-routines-desktop-makeover/
+
+## Claude Code Session Recap (`/recap`) — 2026-04-14
+- **What**: Automatically generates an AI context summary when returning to a session after being away; manually invocable with `/recap`, configurable in `/config`
+- **Situations**: resuming a complex debugging session the next morning, handing off context to a colleague, re-orienting after a long interruption mid-task
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `ENABLE_PROMPT_CACHING_1H` Env Var — 2026-04-14
+- **What**: New Claude Code env var to opt into the 1-hour prompt cache TTL (replacing the 5-minute default) across API key, Bedrock, Vertex, and Foundry; `FORCE_PROMPT_CACHING_5M` forces 5-minute TTL
+- **Situations**: long agent sessions where re-reads of the same large system prompt should hit cache for an hour, Bedrock/Vertex setups that previously required separate config for extended TTL, cutting costs on repeated calls within a work session
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude Sonnet 4 & Opus 4 Deprecation — 2026-04-14
+- **What**: `claude-sonnet-4-20250514` and `claude-opus-4-20250514` are deprecated with retirement on the Claude API scheduled for June 15, 2026; recommended migration targets are Sonnet 4.6 and Opus 4.6
+- **Situations**: auditing codebases for hardcoded deprecated model IDs before the June deadline, planning staged rollouts to 4.6 models, updating CI/CD pipelines that pin model strings
+- **Tags**: [dev]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## PreCompact Hook — 2026-04-13
+- **What**: New Claude Code hook that fires before context compaction; hooks can block compaction by exiting with code 2 or returning `{"decision":"block"}`
+- **Situations**: preserving full conversation context during critical long-running agent tasks, implementing custom compaction logic instead of the default, preventing mid-task summarisation that could drop important tool results
+- **Tags**: [automation, dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Claude for Word Beta — 2026-04-10
 - **What**: Native sidebar add-in for Microsoft Word with AI-assisted editing, clickable citations, and Track Changes integration
 - **Situations**: reviewing legal contracts in-document, drafting financial memos with inline AI edits, accepting/rejecting AI revisions one-by-one

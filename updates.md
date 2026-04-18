@@ -4,6 +4,54 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Claude Design — 2026-04-17
+- **What**: Research preview powered by Opus 4.7 that reads your codebase and design files to generate a reusable design system (colors, typography, components) applied consistently across future projects
+- **Situations**: maintaining visual brand consistency across a growing product, auto-generating UI components from existing design tokens, bootstrapping a design system from a legacy codebase
+- **Tags**: [product, dev]
+- **Source**: https://9to5mac.com/2026/04/17/anthropic-launches-claude-design-for-mac-following-opus-4-7-model-upgrade/
+
+## Claude Code Permission Security Hardening — 2026-04-17
+- **What**: Bash deny rules now match commands wrapped in `env`/`sudo`/`watch`/`ionice`/`setsid`; `Bash(find:*)` allowlists no longer auto-approve `find -exec`/`-delete`; macOS `/private/{etc,var,tmp,home}` paths flagged as dangerous removal targets
+- **Situations**: preventing exec-wrapper tricks from bypassing Claude Code deny rules, securing find-based allowlists that previously allowed destructive `-exec` flags, hardening shared or automated Claude Code deployments
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude Code `sandbox.network.deniedDomains` — 2026-04-17
+- **What**: New Claude Code setting to explicitly block specific domains even when a broader `allowedDomains` wildcard would otherwise permit them
+- **Situations**: blocking high-risk endpoints while keeping broad internet access in sandboxed sessions, enterprise deployments with outbound domain restrictions, fine-grained per-project network control
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude Code `/ultrareview` Command — 2026-04-16
+- **What**: Cloud-based parallel multi-agent code review; run `/ultrareview` on the current branch or `/ultrareview <PR#>` to fetch and review any GitHub PR
+- **Situations**: getting comprehensive pre-merge review without switching to an external tool, reviewing a GitHub PR from directly inside Claude Code, surfacing security or logic issues across large changesets
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude Code `xhigh` Effort Level & Interactive `/effort` Slider — 2026-04-16
+- **What**: New `xhigh` effort tier for Opus 4.7 sitting between `high` and `max`; `/effort` with no arguments now opens an interactive arrow-key slider to set the level
+- **Situations**: dialing Opus 4.7 intelligence vs. speed without paying full `max` compute, quickly adjusting effort mid-session via keyboard, performance-tuning long agentic runs
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude Code PowerShell Tool — 2026-04-16
+- **What**: Native PowerShell tool now rolling out on Windows (opt in/out via `CLAUDE_CODE_USE_POWERSHELL_TOOL`); also available on Linux/macOS with `pwsh` on PATH
+- **Situations**: running PowerShell scripts natively in Claude Code on Windows, Windows-native shell automation without WSL, cross-platform PowerShell workflows
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude in Amazon Bedrock — Generally Available — 2026-04-16
+- **What**: Claude via the Messages API (`/anthropic/v1/messages`) is now open to all Amazon Bedrock customers; Opus 4.7 and Haiku 4.5 available self-serve via the Bedrock console across 27 AWS regions
+- **Situations**: AWS teams adopting Claude without special account approval, deploying Opus 4.7 or Haiku 4.5 directly from the Bedrock console, enterprise workloads requiring regional AWS endpoints
+- **Tags**: [dev, product]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Claude Opus 4.7 — 2026-04-16
+- **What**: Most capable generally available Claude model for complex reasoning and agentic coding at the same $5/$25 per MTok pricing as Opus 4.6; includes updated tokenizer and API breaking changes vs 4.6
+- **Situations**: long-horizon agentic coding requiring the highest available intelligence, production workloads needing frontier reasoning at Opus 4.6 price, migrating from Opus 4.6 (review breaking changes before upgrading)
+- **Tags**: [dev, product]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
 ## Claude Code Routines — 2026-04-14
 - **What**: Cloud-based scheduled automations (cron or event-triggered) that run on Claude Code's web infrastructure even when your local machine is offline
 - **Situations**: scheduling nightly dependency audits or test runs, triggering repo-wide tasks on a schedule without a laptop staying awake, packaging and reusing automations across repos via connectors

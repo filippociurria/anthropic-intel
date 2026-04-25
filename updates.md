@@ -4,6 +4,30 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Memory for Claude Managed Agents (Public Beta) — 2026-04-23
+- **What**: Persistent memory layer for Managed Agents now in public beta; agents learn from every session with an intelligence-optimized memory store that developers can inspect, manage, and export via the API
+- **Situations**: building agents that remember user preferences across sessions, enterprise agents that accumulate domain knowledge over time, production agents that improve through repeated use
+- **Tags**: [dev, automation]
+- **Source**: https://claude.com/blog/claude-managed-agents-memory
+
+## Claude Code MCP Tool Hooks (`type: "mcp_tool"`) — 2026-04-23
+- **What**: Hooks can now directly invoke MCP tools by setting `type: "mcp_tool"` instead of a shell command, eliminating shell-glue wrappers for MCP-backed automation
+- **Situations**: sending Slack notifications via an MCP server on PostToolUse events, chaining MCP actions into Claude Code hook pipelines without shell wrappers, triggering multi-tool workflows from Claude Code events
+- **Tags**: [dev, automation]
+- **Source**: https://github.com/anthropics/claude-code/releases
+
+## Claude Code Vim Visual Mode & Custom Themes — 2026-04-23
+- **What**: Vim visual mode (`v`) and visual-line mode (`V`) added to the editor; new `/theme` command for creating and managing custom color themes in Claude Code (v2.1.118)
+- **Situations**: Vim-workflow developers needing character/line selection in Claude Code's editor, customizing Claude Code's appearance for personal or team preferences, creating branded terminal environments for demos
+- **Tags**: [dev]
+- **Source**: https://github.com/anthropics/claude-code/releases
+
+## Claude Code `--from-pr` Multi-Platform Support — 2026-04-23
+- **What**: `--from-pr` flag now accepts GitLab merge-request, Bitbucket pull-request, and GitHub Enterprise PR URLs in addition to GitHub.com (v2.1.119)
+- **Situations**: GitLab teams reviewing MRs directly in Claude Code, Bitbucket-based projects using Claude Code's PR analysis workflow, enterprises on GitHub Enterprise Server accessing `--from-pr` for the first time
+- **Tags**: [dev]
+- **Source**: https://github.com/anthropics/claude-code/releases
+
 ## Claude Design — 2026-04-17
 - **What**: Research preview powered by Opus 4.7 that reads your codebase and design files to generate a reusable design system (colors, typography, components) applied consistently across future projects
 - **Situations**: maintaining visual brand consistency across a growing product, auto-generating UI components from existing design tokens, bootstrapping a design system from a legacy codebase

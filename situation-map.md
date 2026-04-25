@@ -33,6 +33,15 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Long-horizon agentic pipelines needing occasional deep reasoning | Advisor Tool | 2026-04-09 |
 | Deploying autonomous agents without building own infrastructure | Claude Managed Agents | 2026-04-08 |
 | Running agents with secure sandboxing and scoped permissions | Claude Managed Agents | 2026-04-08 |
+| Building agents that remember user preferences across sessions | Memory for Claude Managed Agents | 2026-04-23 |
+| Enterprise agents that accumulate domain knowledge over time | Memory for Claude Managed Agents | 2026-04-23 |
+| Production agents that improve through repeated use | Memory for Claude Managed Agents | 2026-04-23 |
+| Triggering MCP tool calls directly from Claude Code hooks (no shell glue) | Claude Code MCP Tool Hooks | 2026-04-23 |
+| Sending Slack/MCP notifications on PostToolUse events from hooks | Claude Code MCP Tool Hooks | 2026-04-23 |
+| Vim-style character/line selection in Claude Code's editor | Claude Code Vim Visual Mode | 2026-04-23 |
+| Customizing Claude Code's appearance with custom color themes | Claude Code `/theme` Command | 2026-04-23 |
+| Reviewing GitLab MRs or Bitbucket PRs directly from Claude Code | Claude Code `--from-pr` Multi-Platform | 2026-04-23 |
+| GitHub Enterprise Server teams using `--from-pr` in Claude Code | Claude Code `--from-pr` Multi-Platform | 2026-04-23 |
 | AWS-native Claude deployments matching first-party API shape | Messages API on Amazon Bedrock | 2026-04-07 |
 | Migrating from Claude API to Bedrock without changing SDK code | Messages API on Amazon Bedrock | 2026-04-07 |
 | Regulated industries requiring AWS data residency | Messages API on Amazon Bedrock | 2026-04-07 |

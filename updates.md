@@ -4,6 +4,48 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## `/model` Picker Gateway Support — 2026-05-01
+- **What**: The `/model` picker now populates from your gateway's `/v1/models` endpoint when `ANTHROPIC_BASE_URL` points at an Anthropic-compatible gateway
+- **Situations**: switching between models on a self-hosted LiteLLM or other proxy gateway, enterprise Claude Code deployments routing through an internal API gateway, browsing available gateway models without leaving Claude Code
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude Code Terminal OAuth for WSL2/SSH/Containers — 2026-05-01
+- **What**: `claude auth login` now accepts the OAuth code pasted directly into the terminal when the browser callback can't reach localhost (WSL2, SSH tunnels, devcontainers)
+- **Situations**: authenticating Claude Code inside a remote SSH session without a localhost redirect, logging in from WSL2 or a devcontainer, setting up Claude Code in CI/CD environments that lack browser access
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `claude project purge` Command — 2026-05-01
+- **What**: New `claude project purge [path]` command deletes all Claude Code state for a project (transcripts, tasks, file history, config entry); supports `--dry-run`, `-y/--yes`, `-i/--interactive`, and `--all` flags
+- **Situations**: cleaning up stale Claude Code state after migrating or archiving a repo, bulk-removing old projects from Claude Code's registry with `--all`, dry-running a purge to preview what will be deleted before committing
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## 1M Context Window Beta Retired for Sonnet 4 / Sonnet 4.5 — 2026-04-30
+- **What**: The `context-1m-2025-08-07` beta header no longer extends context for Claude Sonnet 4.5 and Sonnet 4; requests over 200k tokens now return an error unless migrated to Sonnet 4.6 or Opus 4.6 (where 1M context is GA)
+- **Situations**: auditing integrations still using the beta header on Sonnet 4 or Sonnet 4.5 before requests start erroring, migrating large-document pipelines to Sonnet 4.6 or Opus 4.6, planning cutover timing for long-context workflows
+- **Tags**: [dev]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## PR URL in `/resume` Search — 2026-04-28
+- **What**: Pasting a PR URL into the `/resume` search box finds the Claude Code session that originally created that PR (supports GitHub, GitHub Enterprise, GitLab, and Bitbucket)
+- **Situations**: resuming a coding session from a PR link shared in Slack or a code review, reconnecting to the session behind a PR without scrolling through session history, quickly picking up paused PR work from any team member's link
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `ANTHROPIC_BEDROCK_SERVICE_TIER` Env Var — 2026-04-28
+- **What**: New Claude Code env var to select an AWS Bedrock service tier (`default`, `flex`, or `priority`), sent as the `X-Amzn-Bedrock-Service-Tier` header on every request
+- **Situations**: directing high-priority production workloads to Bedrock reserved capacity, running non-critical batch jobs on the lower-cost flex tier, fine-tuning cost/performance trade-offs across separate Bedrock deployments
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Rate Limits API — 2026-04-24
+- **What**: New API endpoints let administrators programmatically query the rate limits configured for their organization and individual workspaces
+- **Situations**: building dashboards to monitor API capacity headroom before large batch runs, auto-scaling pipelines that check workspace limits before dispatching jobs, auditing rate limit configurations across multiple workspaces
+- **Tags**: [dev, analytics]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
 ## Memory for Claude Managed Agents (Public Beta) — 2026-04-23
 - **What**: Persistent memory layer for Managed Agents now in public beta; agents learn from every session with an intelligence-optimized memory store that developers can inspect, manage, and export via the API
 - **Situations**: building agents that remember user preferences across sessions, enterprise agents that accumulate domain knowledge over time, production agents that improve through repeated use

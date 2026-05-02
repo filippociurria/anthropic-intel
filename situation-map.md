@@ -15,6 +15,8 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Blocking specific domains while keeping broad network access in sandbox | `sandbox.network.deniedDomains` | 2026-04-17 |
 | Preventing exec-wrapper tricks from bypassing Claude Code deny rules | Claude Code Permission Security Hardening | 2026-04-17 |
 | Securing find-based allowlists to block destructive `-exec` commands | Claude Code Permission Security Hardening | 2026-04-17 |
+| Directing Bedrock production workloads to reserved capacity vs. flex tier | `ANTHROPIC_BEDROCK_SERVICE_TIER` | 2026-04-28 |
+| Setting up Claude Code auth inside CI/CD, devcontainers, or SSH sessions | Claude Code Terminal OAuth | 2026-05-01 |
 
 ## Development & API
 
@@ -60,6 +62,16 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Quickly adjusting effort level mid-session via keyboard | Interactive `/effort` Slider | 2026-04-16 |
 | Running PowerShell scripts natively in Claude Code on Windows | Claude Code PowerShell Tool | 2026-04-16 |
 | Windows-native shell automation without WSL | Claude Code PowerShell Tool | 2026-04-16 |
+| Auditing integrations using `context-1m-2025-08-07` on Sonnet 4 / 4.5 before errors start | 1M Context Window Beta Retired | 2026-04-30 |
+| Migrating large-document pipelines from Sonnet 4/4.5 to Sonnet 4.6 or Opus 4.6 | 1M Context Window Beta Retired | 2026-04-30 |
+| Resuming a coding session by pasting a PR URL instead of searching history | PR URL in `/resume` | 2026-04-28 |
+| Querying workspace rate limits programmatically before dispatching batch jobs | Rate Limits API | 2026-04-24 |
+| Building dashboards to monitor API capacity headroom | Rate Limits API | 2026-04-24 |
+| Auditing rate limit configurations across multiple workspaces | Rate Limits API | 2026-04-24 |
+| Cleaning up stale Claude Code state after archiving or migrating a repo | `claude project purge` | 2026-05-01 |
+| Bulk-removing old projects from Claude Code's registry | `claude project purge` | 2026-05-01 |
+| Browsing available models on a self-hosted or enterprise API gateway | `/model` Picker Gateway Support | 2026-05-01 |
+| Switching Claude Code models on a LiteLLM or internal proxy gateway | `/model` Picker Gateway Support | 2026-05-01 |
 
 ## Research & Security
 

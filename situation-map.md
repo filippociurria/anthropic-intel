@@ -17,6 +17,15 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Securing find-based allowlists to block destructive `-exec` commands | Claude Code Permission Security Hardening | 2026-04-17 |
 | Directing Bedrock production workloads to reserved capacity vs. flex tier | `ANTHROPIC_BEDROCK_SERVICE_TIER` | 2026-04-28 |
 | Setting up Claude Code auth inside CI/CD, devcontainers, or SSH sessions | Claude Code Terminal OAuth | 2026-05-01 |
+| Getting a desktop notification when a long Claude Code task finishes | Hook Desktop Notifications (`terminalSequence`) | 2026-05-13 |
+| Updating the terminal window title to reflect Claude's current task | Hook Desktop Notifications (`terminalSequence`) | 2026-05-13 |
+| Launching a background agent with a different model or effort level | `claude agents` Dispatched Session Flags | 2026-05-14 |
+| Pointing a dispatched background agent at a custom MCP config or plugin directory | `claude agents` Dispatched Session Flags | 2026-05-14 |
+| Preserving auto-approved permissions when spawning background agents | Background Agent Permission Mode Preservation | 2026-05-13 |
+| Scoping a workload-identity-federation token to a specific workspace | `ANTHROPIC_WORKSPACE_ID` | 2026-05-13 |
+| AWS-native full Managed Agents deployment with IAM auth and AWS billing | Claude Platform on AWS | 2026-05-11 |
+| Retiring AWS commitments against Claude usage | Claude Platform on AWS | 2026-05-11 |
+| Getting up-to-2.5× faster Opus 4.7 output for real-time agentic workflows | Fast Mode for Opus 4.7 | 2026-05-12 |
 
 ## Development & API
 
@@ -72,6 +81,8 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Bulk-removing old projects from Claude Code's registry | `claude project purge` | 2026-05-01 |
 | Browsing available models on a self-hosted or enterprise API gateway | `/model` Picker Gateway Support | 2026-05-01 |
 | Switching Claude Code models on a LiteLLM or internal proxy gateway | `/model` Picker Gateway Support | 2026-05-01 |
+| Freeing context window space mid-session without losing recent tool results | "Summarize up to here" in Rewind | 2026-05-13 |
+| Archiving the early exploratory phase of a long Claude Code session | "Summarize up to here" in Rewind | 2026-05-13 |
 
 ## Research & Security
 
@@ -80,6 +91,14 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Defensive cybersecurity analysis | Claude Mythos Preview | 2026-04-07 |
 | Identifying vulnerabilities in critical software | Claude Mythos Preview | 2026-04-07 |
 | Security research requiring advanced reasoning | Claude Mythos Preview | 2026-04-07 |
+
+## Small Business & Workflows
+
+| Situation | Feature | Date |
+|-----------|---------|------|
+| Automating invoicing or payroll against QuickBooks without custom integrations | Claude for Small Business | 2026-05-13 |
+| Running month-end close workflows directly from Claude | Claude for Small Business | 2026-05-13 |
+| Launching HubSpot or Canva marketing automations out of the box | Claude for Small Business | 2026-05-13 |
 
 ## Product & Collaboration
 

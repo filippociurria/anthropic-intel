@@ -4,6 +4,56 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## `claude agents` Dispatched Session Flags — 2026-05-14
+- **What**: `claude agents` now accepts `--add-dir`, `--settings`, `--mcp-config`, `--plugin-dir`, `--permission-mode`, `--model`, `--effort`, and `--dangerously-skip-permissions` flags to configure each dispatched background session independently
+- **Situations**: launching a background agent with a different model or effort level than the foreground session, pointing a dispatched agent at a custom MCP config or plugin directory, setting a specific permission mode per background task
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Fast Mode Now Defaults to Claude Opus 4.7 — 2026-05-12
+- **What**: Fast mode (`speed: "fast"`) now supports Opus 4.7 on the API (via the `fast-mode-2026-02-01` beta header); Claude Code also updated fast mode to use Opus 4.7 by default (override with `CLAUDE_CODE_OPUS_4_6_FAST_MODE_OVERRIDE=1`)
+- **Situations**: getting significantly faster Opus 4.7 output for interactive or real-time agentic workflows, upgrading from Opus 4.6 fast mode without changing integration code, combining frontier intelligence with up-to-2.5× speed at premium pricing
+- **Tags**: [dev]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Claude for Small Business — 2026-05-13
+- **What**: New Claude plan with pre-built connectors and ready-to-run automation workflows for QuickBooks, PayPal, HubSpot, Canva, DocuSign, Google Workspace, and Microsoft 365 covering payroll, invoicing, sales, marketing, and month-end close
+- **Situations**: automating invoicing or payroll runs against QuickBooks without building a custom integration, running month-end close workflows directly from Claude, launching HubSpot or Canva-based marketing automations out of the box
+- **Tags**: [product, automation, campaigns]
+- **Source**: https://siliconangle.com/2026/05/13/anthropic-launches-claude-small-business-new-automation-workflows/
+
+## Hook Desktop Notifications via `terminalSequence` — 2026-05-13
+- **What**: Hooks can now emit desktop notifications, window title updates, and terminal bells by including a `terminalSequence` field in hook JSON output, even without a controlling terminal
+- **Situations**: getting a desktop pop-up when a long agentic coding task completes, updating the terminal window title to show Claude's current task, triggering a bell when a file-edit or deploy hook fires
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## "Summarize up to here" in Rewind Menu — 2026-05-13
+- **What**: New Rewind menu option that compresses context up to the selected point while preserving recent turns, giving finer-grained control than full session compaction
+- **Situations**: freeing context window space mid-session without discarding the most recent work, archiving the early exploratory phase of a long debugging session, reducing token spend on a multi-hour task while keeping the latest tool results intact
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Background Agent Permission Mode Preservation — 2026-05-13
+- **What**: Background agents launched via `/bg` or `←←` now inherit and preserve the current session's permission mode instead of reverting to the default
+- **Situations**: spawning a background agent that should share the same auto-approved permissions as the foreground session, avoiding unexpected permission prompts when backgrounding tasks mid-session, maintaining consistent allow/deny rules across parallel agents
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `ANTHROPIC_WORKSPACE_ID` Env Var — 2026-05-13
+- **What**: New Claude Code env var to scope a workload-identity-federation minted token to a specific workspace when the federation rule covers more than one workspace
+- **Situations**: multi-workspace enterprise deployments where each team's Claude Code instance should use its own workspace budget, CI/CD pipelines using workload identity federation that need to target a specific workspace, preventing token reuse across workspace boundaries
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude Platform on AWS — 2026-05-11
+- **What**: Full Claude Platform (Messages API, Files API, Message Batches API, Managed Agents, Agent Skills, code execution, tool use) now available on Anthropic-managed AWS infrastructure with AWS billing and IAM authentication
+- **Situations**: AWS-native teams accessing the full Managed Agents stack with IAM auth and AWS cost reporting, organizations retiring AWS commitments against Claude usage, deploying Claude code execution and web tools through native AWS endpoints without a separate Anthropic account
+- **Tags**: [dev, automation]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+---
+
 ## `/model` Picker Gateway Support — 2026-05-01
 - **What**: The `/model` picker now populates from your gateway's `/v1/models` endpoint when `ANTHROPIC_BASE_URL` points at an Anthropic-compatible gateway
 - **Situations**: switching between models on a self-hosted LiteLLM or other proxy gateway, enterprise Claude Code deployments routing through an internal API gateway, browsing available gateway models without leaving Claude Code

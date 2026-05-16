@@ -26,6 +26,9 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | AWS-native full Managed Agents deployment with IAM auth and AWS billing | Claude Platform on AWS | 2026-05-11 |
 | Retiring AWS commitments against Claude usage | Claude Platform on AWS | 2026-05-11 |
 | Getting up-to-2.5× faster Opus 4.7 output for real-time agentic workflows | Fast Mode for Opus 4.7 | 2026-05-12 |
+| Running background agents in repos where git worktrees are impractical | `worktree.bgIsolation: "none"` | 2026-05-15 |
+| Safely disabling a Claude Code plugin that other plugins depend on | Plugin Dependency Enforcement | 2026-05-15 |
+| Checking per-plugin token cost before enabling it in Claude Code | Plugin Cost Estimates in Marketplace | 2026-05-15 |
 
 ## Development & API
 
@@ -91,6 +94,9 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Defensive cybersecurity analysis | Claude Mythos Preview | 2026-04-07 |
 | Identifying vulnerabilities in critical software | Claude Mythos Preview | 2026-04-07 |
 | Security research requiring advanced reasoning | Claude Mythos Preview | 2026-04-07 |
+| Global health research (disease, diagnostics) needing Claude access | Anthropic–Gates Foundation Partnership | 2026-05-14 |
+| Education-equity programs building AI tooling for underserved communities | Anthropic–Gates Foundation Partnership | 2026-05-14 |
+| Life sciences and agriculture AI initiatives aligned with Gates Foundation | Anthropic–Gates Foundation Partnership | 2026-05-14 |
 
 ## Small Business & Workflows
 

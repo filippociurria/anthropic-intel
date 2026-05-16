@@ -4,6 +4,24 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Plugin Dependency Enforcement & Cost Estimates — 2026-05-15
+- **What**: `claude plugin disable` now refuses when another enabled plugin depends on the target (showing a copy-pasteable disable-chain hint); `claude plugin enable` force-enables transitive dependencies; `/plugin` marketplace browse pane now shows projected context cost (per-turn and per-invocation token estimates) per plugin
+- **Situations**: safely disabling a plugin without accidentally breaking dependent plugins, understanding token/cost impact before enabling a new plugin, managing interconnected plugin dependency graphs in Claude Code
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `worktree.bgIsolation: "none"` Setting — 2026-05-15
+- **What**: New Claude Code setting allowing background sessions to edit the working copy directly without creating or entering a git worktree, for repos where worktrees are impractical
+- **Situations**: repos with complex build systems or CI configs that break when run inside a worktree, large monorepos where worktree creation is prohibitively slow, standardizing on direct-edit background agents across a team
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Anthropic–Gates Foundation Partnership — 2026-05-14
+- **What**: Anthropic and the Gates Foundation announced a $200M commitment (grant funding, Claude usage credits, and technical support) for AI in global health, life sciences, education, and economic mobility over four years
+- **Situations**: global health researchers needing Claude access for disease eradication or diagnostics work, education-equity programs building AI tooling for underserved communities, life sciences teams working on agriculture or public health applications
+- **Tags**: [research, product]
+- **Source**: https://www.anthropic.com/news/gates-foundation-partnership
+
 ## `claude agents` Dispatched Session Flags — 2026-05-14
 - **What**: `claude agents` now accepts `--add-dir`, `--settings`, `--mcp-config`, `--plugin-dir`, `--permission-mode`, `--model`, `--effort`, and `--dangerously-skip-permissions` flags to configure each dispatched background session independently
 - **Situations**: launching a background agent with a different model or effort level than the foreground session, pointing a dispatched agent at a custom MCP config or plugin directory, setting a specific permission mode per background task

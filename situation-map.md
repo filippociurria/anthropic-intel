@@ -29,6 +29,10 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Running background agents in repos where git worktrees are impractical | `worktree.bgIsolation: "none"` | 2026-05-15 |
 | Safely disabling a Claude Code plugin that other plugins depend on | Plugin Dependency Enforcement | 2026-05-15 |
 | Checking per-plugin token cost before enabling it in Claude Code | Plugin Cost Estimates in Marketplace | 2026-05-15 |
+| Enterprise Windows teams on Bedrock/Vertex/Foundry needing PowerShell without manual opt-in | PowerShell Tool Default-On for Bedrock/Vertex/Foundry | 2026-05-15 |
+| Scripts failing due to execution policy restrictions on enterprise Claude Code Windows deployments | PowerShell Tool Default-On for Bedrock/Vertex/Foundry | 2026-05-15 |
+| Detaching a session started with a custom MCP config and keeping that config in the background | Background Session `/bg` Config Flag Persistence | 2026-05-15 |
+| Resuming a backgrounded session after sleep without losing the selected model or effort level | Background Session `/bg` Config Flag Persistence | 2026-05-15 |
 
 ## Development & API
 
@@ -84,6 +88,9 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Bulk-removing old projects from Claude Code's registry | `claude project purge` | 2026-05-01 |
 | Browsing available models on a self-hosted or enterprise API gateway | `/model` Picker Gateway Support | 2026-05-01 |
 | Switching Claude Code models on a LiteLLM or internal proxy gateway | `/model` Picker Gateway Support | 2026-05-01 |
+| Budgeting programmatic Claude usage (`claude -p`, GitHub Actions) separately from chat | Claude Agent SDK Credits | 2026-05-14 |
+| Teams using OpenClaw or third-party Claude agents resuming subscription-backed use | Claude Agent SDK Credits | 2026-05-14 |
+| Planning for the June 15, 2026 billing changeover for programmatic Claude usage | Claude Agent SDK Credits | 2026-05-14 |
 | Freeing context window space mid-session without losing recent tool results | "Summarize up to here" in Rewind | 2026-05-13 |
 | Archiving the early exploratory phase of a long Claude Code session | "Summarize up to here" in Rewind | 2026-05-13 |
 
@@ -118,3 +125,6 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Maintaining visual brand consistency across a growing product | Claude Design | 2026-04-17 |
 | Auto-generating UI components from existing codebase and design files | Claude Design | 2026-04-17 |
 | Bootstrapping a design system from a legacy codebase | Claude Design | 2026-04-17 |
+| Enterprise consulting teams evaluating Claude for large-scale staff deployment and certification | PwC–Anthropic Expanded Alliance | 2026-05-14 |
+| Finance/CFO-office workflows seeking Claude-native tooling via PwC's Office of the CFO group | PwC–Anthropic Expanded Alliance | 2026-05-14 |
+| Assessing Anthropic's Big Four presence before an enterprise Claude adoption decision | PwC–Anthropic Expanded Alliance | 2026-05-14 |

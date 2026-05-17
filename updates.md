@@ -4,6 +4,30 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## PowerShell Tool Default-On for Bedrock/Vertex/Foundry Windows — 2026-05-15
+- **What**: PowerShell tool is now enabled by default on Windows for Bedrock, Vertex, and Foundry Claude Code users (previously opt-in), and now passes `-ExecutionPolicy Bypass` automatically (opt out with `CLAUDE_CODE_POWERSHELL_RESPECT_EXECUTION_POLICY=1`)
+- **Situations**: enterprise Windows teams on Bedrock, Vertex, or Foundry gaining PowerShell support without manual opt-in, scripts that previously failed due to execution policy restrictions, standardizing PowerShell-first shell automation across cloud-provider Claude Code deployments
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Background Session `/bg` Config Flag Persistence — 2026-05-15
+- **What**: `/bg` and `←`-detach now carry `--mcp-config`, `--settings`, `--add-dir`, `--plugin-dir`, `--strict-mcp-config`, `--fallback-model`, and `--allow-dangerously-skip-permissions` into background sessions; background sessions also keep their model and effort level after waking from idle
+- **Situations**: detaching a session started with a custom MCP config and having the background agent keep using it, resuming a backgrounded session after sleep without losing the selected model, backgrounding tasks that need a specific fallback model or plugin directory
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude Agent SDK Credits — 2026-05-14
+- **What**: New separate monthly "Agent SDK credits" pool for programmatic and third-party Claude usage ($20 for Pro, $100 for Max 5x, $400 for Max 20x), effective June 15; restores access to third-party agent harnesses (OpenClaw, T3 Code, Conductor, Zed, Jean) banned from subscriptions in April
+- **Situations**: developers running `claude -p` or Claude Code GitHub Actions who need to budget programmatic usage separately from chat, teams using OpenClaw or similar third-party Claude agents resuming subscription-backed usage under the new credit caps, understanding effective cost before the June 15 billing changeover
+- **Tags**: [dev, automation, product]
+- **Source**: https://venturebeat.com/technology/anthropic-reinstates-openclaw-and-third-party-agent-usage-on-claude-subscriptions-with-a-catch
+
+## PwC–Anthropic Expanded Alliance — 2026-05-14
+- **What**: PwC expands strategic alliance to train 30,000 staff on Claude, deploy Claude Code and Cowork firm-wide, and launch a new Office of the CFO business group built on Claude as the first standalone PwC unit anchored in Anthropic technology
+- **Situations**: enterprise consulting teams evaluating Claude for large-scale deployment and certification programs, finance/CFO-office workflows seeking Claude-native tooling via PwC, organizations benchmarking Anthropic's Big Four footprint before adopting
+- **Tags**: [product, analytics]
+- **Source**: https://www.anthropic.com/news/pwc-expanded-partnership
+
 ## Plugin Dependency Enforcement & Cost Estimates — 2026-05-15
 - **What**: `claude plugin disable` now refuses when another enabled plugin depends on the target (showing a copy-pasteable disable-chain hint); `claude plugin enable` force-enables transitive dependencies; `/plugin` marketplace browse pane now shows projected context cost (per-turn and per-invocation token estimates) per plugin
 - **Situations**: safely disabling a plugin without accidentally breaking dependent plugins, understanding token/cost impact before enabling a new plugin, managing interconnected plugin dependency graphs in Claude Code

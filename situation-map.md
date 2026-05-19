@@ -93,11 +93,19 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Planning for the June 15, 2026 billing changeover for programmatic Claude usage | Claude Agent SDK Credits | 2026-05-14 |
 | Freeing context window space mid-session without losing recent tool results | "Summarize up to here" in Rewind | 2026-05-13 |
 | Archiving the early exploratory phase of a long Claude Code session | "Summarize up to here" in Rewind | 2026-05-13 |
+| Resuming a background agent session without hunting through session history | `/resume` Background Session Support | 2026-05-19 |
+| Seeing how long a background task ran before completing | `/resume` Background Session Support | 2026-05-19 |
+| Temporarily switching models mid-session without affecting other sessions | Per-Session `/model` with `d` Default | 2026-05-19 |
+| Setting a preferred default Claude Code model once from the picker | Per-Session `/model` with `d` Default | 2026-05-19 |
+| Checking if a Claude Code plugin is actively maintained before installing | Plugin Last-Updated Date in Marketplace | 2026-05-19 |
+| Auditing for stale plugins across a team Claude Code setup | Plugin Last-Updated Date in Marketplace | 2026-05-19 |
 
 ## Research & Security
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Grounding a financial research agent in primary SEC filings with citations | Web Search Tool SEC Filing Data | 2026-05-18 |
+| Earnings analysis or due-diligence workflows requiring cited primary sources | Web Search Tool SEC Filing Data | 2026-05-18 |
 | Defensive cybersecurity analysis | Claude Mythos Preview | 2026-04-07 |
 | Identifying vulnerabilities in critical software | Claude Mythos Preview | 2026-04-07 |
 | Security research requiring advanced reasoning | Claude Mythos Preview | 2026-04-07 |

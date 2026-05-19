@@ -4,6 +4,30 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Per-Session `/model` with `d` Default Shortcut — 2026-05-19
+- **What**: `/model` now scopes the change to the current session only; pressing `d` in the model picker sets the default model for all new sessions going forward
+- **Situations**: temporarily switching to a different model mid-session without affecting other open sessions, setting a preferred default model once from the picker, keeping a standard default while experimenting with a faster model in a side session
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Plugin Last-Updated Date in Marketplace — 2026-05-19
+- **What**: The `/plugin` browse and discover panes now display when each plugin was last updated
+- **Situations**: checking whether a plugin is actively maintained before installing it, comparing freshness of competing plugins in the marketplace, auditing for stale plugins across a team Claude Code setup
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `/resume` Background Session Support — 2026-05-19
+- **What**: Background sessions started via `claude --bg` or agent view now appear in the `/resume` picker (marked `bg`); elapsed duration is shown in background subagent completion notifications
+- **Situations**: resuming a named background agent session without hunting through session history, seeing how long a background task ran before it completed, navigating between foreground and background sessions from one place
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Web Search Tool SEC Filing Data — 2026-05-18
+- **What**: The web search tool now returns richer SEC filing data, grounding financial research agents, earnings analysis, and due-diligence workflows in primary sources with citations
+- **Situations**: grounding a financial research agent in primary SEC filings, earnings analysis requiring cited primary sources, running API-based due-diligence workflows on public companies
+- **Tags**: [dev, analytics, research]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
 ## PowerShell Tool Default-On for Bedrock/Vertex/Foundry Windows — 2026-05-15
 - **What**: PowerShell tool is now enabled by default on Windows for Bedrock, Vertex, and Foundry Claude Code users (previously opt-in), and now passes `-ExecutionPolicy Bypass` automatically (opt out with `CLAUDE_CODE_POWERSHELL_RESPECT_EXECUTION_POLICY=1`)
 - **Situations**: enterprise Windows teams on Bedrock, Vertex, or Foundry gaining PowerShell support without manual opt-in, scripts that previously failed due to execution policy restrictions, standardizing PowerShell-first shell automation across cloud-provider Claude Code deployments

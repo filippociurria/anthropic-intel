@@ -33,6 +33,14 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Scripts failing due to execution policy restrictions on enterprise Claude Code Windows deployments | PowerShell Tool Default-On for Bedrock/Vertex/Foundry | 2026-05-15 |
 | Detaching a session started with a custom MCP config and keeping that config in the background | Background Session `/bg` Config Flag Persistence | 2026-05-15 |
 | Resuming a backgrounded session after sleep without losing the selected model or effort level | Background Session `/bg` Config Flag Persistence | 2026-05-15 |
+| Connecting Claude to private-network MCP servers without a VPN client | MCP Tunnels Research Preview | 2026-05-19 |
+| Using internal company tools as MCP servers from Claude | MCP Tunnels Research Preview | 2026-05-19 |
+| Running Managed Agent tool execution on your own infrastructure | Self-hosted Sandboxes for Managed Agents | 2026-05-19 |
+| Enterprise data-residency or compliance requirements for Managed Agent code execution | Self-hosted Sandboxes for Managed Agents | 2026-05-19 |
+| Adding or rotating MCP tools in a running Managed Agent session without restart | Live MCP Config Updates for Managed Agents | 2026-05-19 |
+| Agents receiving large tool responses without hitting context-window limits | Managed Agent Large Output Auto-Spill | 2026-05-19 |
+| Building a tmux status bar or dashboard showing active Claude Code sessions | `claude agents --json` | 2026-05-19 |
+| Scripting Claude Code session management workflows with `jq` or shell tools | `claude agents --json` | 2026-05-19 |
 
 ## Development & API
 
@@ -99,6 +107,10 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Setting a preferred default Claude Code model once from the picker | Per-Session `/model` with `d` Default | 2026-05-19 |
 | Checking if a Claude Code plugin is actively maintained before installing | Plugin Last-Updated Date in Marketplace | 2026-05-19 |
 | Auditing for stale plugins across a team Claude Code setup | Plugin Last-Updated Date in Marketplace | 2026-05-19 |
+| Evaluating what a plugin adds before committing to installation | `/plugin` Pre-Installation Details | 2026-05-19 |
+| Comparing two similar plugins on feature breadth before installing | `/plugin` Pre-Installation Details | 2026-05-19 |
+| Checking whether a plugin exposes MCP servers before adding it to a team setup | `/plugin` Pre-Installation Details | 2026-05-19 |
+| Running a quick vs. deep code review in the same session without changing global effort | `/code-review` Command with Effort Level | 2026-05-21 |
 
 ## Research & Security
 

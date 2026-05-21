@@ -4,6 +4,48 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## `/code-review` Command with Effort Level — 2026-05-21
+- **What**: `/simplify` renamed to `/code-review`; now accepts an optional effort level (e.g. `/code-review high`) for coarse-to-fine review thoroughness
+- **Situations**: running a quick sanity check vs. a deep review in the same session, using the clearer command name in team runbooks, pairing a code review with a specific effort tier without changing global effort
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## MCP Tunnels Research Preview — 2026-05-19
+- **What**: New Research Preview feature that creates a secure tunnel to connect Claude to MCP servers running inside your private network
+- **Situations**: using internal company tools as MCP servers without public endpoints, accessing on-prem databases or APIs from Claude without a VPN client requirement, evaluating private-network MCP connectivity before full rollout
+- **Tags**: [dev, automation]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Self-hosted Sandboxes for Managed Agents — 2026-05-19
+- **What**: New option to run Managed Agent tool execution on your own infrastructure instead of Anthropic's sandbox
+- **Situations**: enterprise teams with data-residency requirements needing tool execution on-prem, regulated industries that can't send code execution to a third-party cloud, customizing the agent sandbox beyond Anthropic's default environment
+- **Tags**: [dev, automation]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Live MCP Config Updates for Active Managed Agent Sessions — 2026-05-19
+- **What**: Managed Agent sessions can now have their MCP server and tool configurations updated while the session is still running, without a restart
+- **Situations**: adding a new tool to a running agent without interruption, rotating MCP credentials mid-session, dynamically adjusting which tools are available during a long-running agentic task
+- **Tags**: [dev, automation]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Managed Agent Large Output Auto-Spill to File — 2026-05-19
+- **What**: `agent_toolset` and MCP tool outputs exceeding 100K tokens in Managed Agent sandboxes are automatically written to a sandbox file; the model gets a truncated preview with the file path and reads full content on demand
+- **Situations**: agents receiving large tool responses (database dumps, long API results) without hitting context-window limits, iterating on large datasets inside Managed Agent sessions, preventing truncated tool output from breaking long agentic workflows
+- **Tags**: [dev, automation]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## `claude agents --json` Session Listing — 2026-05-19
+- **What**: New `--json` flag on `claude agents` outputs all live Claude Code sessions as structured JSON for scripting, status bars, and custom session pickers
+- **Situations**: building a tmux status bar or dashboard showing active Claude sessions, scripting session management workflows with `jq`, integrating Claude session state into a custom launcher or monitoring tool
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `/plugin` Pre-Installation Details — 2026-05-19
+- **What**: The `/plugin` Discover and Browse screens now show a plugin's commands, agents, skills, hooks, and MCP/LSP servers before installation
+- **Situations**: evaluating exactly what a plugin adds before committing to installation, comparing two similar plugins on feature breadth, checking whether a plugin exposes MCP servers before adding it to a shared team setup
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Per-Session `/model` with `d` Default Shortcut — 2026-05-19
 - **What**: `/model` now scopes the change to the current session only; pressing `d` in the model picker sets the default model for all new sessions going forward
 - **Situations**: temporarily switching to a different model mid-session without affecting other open sessions, setting a preferred default model once from the picker, keeping a standard default while experimenting with a faster model in a side session

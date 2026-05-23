@@ -41,6 +41,8 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Agents receiving large tool responses without hitting context-window limits | Managed Agent Large Output Auto-Spill | 2026-05-19 |
 | Building a tmux status bar or dashboard showing active Claude Code sessions | `claude agents --json` | 2026-05-19 |
 | Scripting Claude Code session management workflows with `jq` or shell tools | `claude agents --json` | 2026-05-19 |
+| Combining cloud and local MCP connectors in a managed enterprise Claude Code deployment | `allowAllClaudeAiMcps` Enterprise MCP Setting | 2026-05-22 |
+| Enabling claude.ai cloud MCPs for users under managed IT policies | `allowAllClaudeAiMcps` Enterprise MCP Setting | 2026-05-22 |
 
 ## Development & API
 
@@ -111,6 +113,12 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Comparing two similar plugins on feature breadth before installing | `/plugin` Pre-Installation Details | 2026-05-19 |
 | Checking whether a plugin exposes MCP servers before adding it to a team setup | `/plugin` Pre-Installation Details | 2026-05-19 |
 | Running a quick vs. deep code review in the same session without changing global effort | `/code-review` Command with Effort Level | 2026-05-21 |
+| Identifying which plugins or subagents are consuming the most Claude Code quota | `/usage` Per-Category Breakdown | 2026-05-22 |
+| Auditing per-MCP-server token cost in complex Claude Code tool stacks | `/usage` Per-Category Breakdown | 2026-05-22 |
+| Debugging unexpected cache misses in multi-turn production API pipelines | Cache Diagnostics (Public Beta) | 2026-05-13 |
+| Identifying why prompt cache isn't hitting between conversation turns | Cache Diagnostics (Public Beta) | 2026-05-13 |
+| Teams relying on Stainless-hosted SDK generation planning migration before shutdown | Anthropic Acquires Stainless | 2026-05-18 |
+| Tracking Anthropic's SDK toolchain ownership and developer ecosystem investment | Anthropic Acquires Stainless | 2026-05-18 |
 
 ## Research & Security
 

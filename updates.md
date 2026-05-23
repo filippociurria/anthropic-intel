@@ -4,6 +4,30 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## `/usage` Per-Category Breakdown — 2026-05-22
+- **What**: `/usage` now shows a per-category breakdown of what's driving your limits usage — skills, subagents, plugins, and per-MCP-server cost
+- **Situations**: identifying which plugins or subagents are consuming the most Claude Code quota, auditing per-MCP-server cost in complex tool stacks, debugging unexpected usage limit hits mid-session
+- **Tags**: [dev, analytics]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `allowAllClaudeAiMcps` Enterprise MCP Setting — 2026-05-22
+- **What**: New `allowAllClaudeAiMcps` managed setting that lets enterprise Claude Code deployments load claude.ai cloud MCP connectors alongside their `managed-mcp.json` config
+- **Situations**: enterprise teams combining cloud and locally-managed MCP connectors in a single Claude Code deployment, enabling claude.ai MCP servers for users under managed IT policies, expanding available MCP tools without modifying `managed-mcp.json`
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Anthropic Acquires Stainless — 2026-05-18
+- **What**: Anthropic acquired Stainless (~$300M), the SDK-automation startup that auto-generates TypeScript, Python, Go, Java, and other SDKs from API specs — the same tooling used to build Anthropic's own official SDKs; Stainless is winding down its hosted SDK generator product
+- **Situations**: teams relying on Stainless-hosted SDK generation planning migration before shutdown, developers tracking Anthropic's SDK quality and toolchain ownership, enterprises evaluating Anthropic's long-term developer ecosystem investment
+- **Tags**: [dev, product]
+- **Source**: https://www.anthropic.com/news/anthropic-acquires-stainless
+
+## Cache Diagnostics (Public Beta) — 2026-05-13
+- **What**: New public beta (`cache-diagnosis-2026-04-07` header): pass `diagnostics.previous_message_id` on a Messages request and the API returns a `cache_miss_reason` explaining where the prompt cache prefix diverged from the previous turn
+- **Situations**: debugging unexpected cache misses in multi-turn production pipelines, optimizing prompt caching configuration for high-volume applications, identifying why cache isn't hitting between conversation turns
+- **Tags**: [dev, analytics]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
 ## `/code-review` Command with Effort Level — 2026-05-21
 - **What**: `/simplify` renamed to `/code-review`; now accepts an optional effort level (e.g. `/code-review high`) for coarse-to-fine review thoroughness
 - **Situations**: running a quick sanity check vs. a deep review in the same session, using the clearer command name in team runbooks, pairing a code review with a specific effort tier without changing global effort

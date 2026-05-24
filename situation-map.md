@@ -113,6 +113,8 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Comparing two similar plugins on feature breadth before installing | `/plugin` Pre-Installation Details | 2026-05-19 |
 | Checking whether a plugin exposes MCP servers before adding it to a team setup | `/plugin` Pre-Installation Details | 2026-05-19 |
 | Running a quick vs. deep code review in the same session without changing global effort | `/code-review` Command with Effort Level | 2026-05-21 |
+| Keyboard-navigating large diffs in Claude Code without switching to the mouse | `/diff` Detail View Keyboard Navigation | 2026-05-22 |
+| Reading AI-generated task lists or action plans as visual checkboxes in Claude Code output | GFM Task List Rendering in Claude Code | 2026-05-22 |
 | Identifying which plugins or subagents are consuming the most Claude Code quota | `/usage` Per-Category Breakdown | 2026-05-22 |
 | Auditing per-MCP-server token cost in complex Claude Code tool stacks | `/usage` Per-Category Breakdown | 2026-05-22 |
 | Debugging unexpected cache misses in multi-turn production API pipelines | Cache Diagnostics (Public Beta) | 2026-05-13 |

@@ -4,6 +4,18 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## `/diff` Detail View Keyboard Navigation — 2026-05-22
+- **What**: Claude Code's `/diff` detail pane can now be scrolled with keyboard shortcuts (arrows, `j`/`k`, `PgUp`/`PgDn`, `Space`, `Home`/`End`), replacing mouse-only navigation
+- **Situations**: reviewing large multi-file diffs without leaving the keyboard, navigating diff output during terminal-only or remote sessions, power users keeping hands off the mouse during code review
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## GFM Task List Rendering in Claude Code — 2026-05-22
+- **What**: Claude Code markdown output now renders GitHub Flavored Markdown task list checkboxes (`- [ ] todo` / `- [x] done`) as visual checkboxes instead of raw bullet points
+- **Situations**: reading AI-generated action plans or checklists in Claude Code output, tracking multi-step todos from a Claude response at a glance, reviewing structured task breakdowns without mentally parsing `[ ]` markers
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## `/usage` Per-Category Breakdown — 2026-05-22
 - **What**: `/usage` now shows a per-category breakdown of what's driving your limits usage — skills, subagents, plugins, and per-MCP-server cost
 - **Situations**: identifying which plugins or subagents are consuming the most Claude Code quota, auditing per-MCP-server cost in complex tool stacks, debugging unexpected usage limit hits mid-session

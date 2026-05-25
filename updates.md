@@ -4,6 +4,12 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Project Glasswing: First Quantified Results — 2026-05-22
+- **What**: Anthropic's Project Glasswing published its first results: Claude Mythos Preview identified 10,000+ high/critical-severity vulnerabilities across widely-used open-source software (e.g. CVE-2026-5194 in wolfSSL), with 90.6% confirmed as valid true positives by independent security firms
+- **Situations**: evaluating Claude Mythos for large-scale defensive security analysis before requesting access, benchmarking AI-assisted vulnerability discovery against human researcher baselines, tracking Anthropic's cybersecurity research progress ahead of a broader Mythos release
+- **Tags**: [research, dev]
+- **Source**: https://www.techtimes.com/articles/317076/20260524/anthropic-moves-closer-public-claude-mythos-release-10000-critical-bugs-found-first.htm
+
 ## `/diff` Detail View Keyboard Navigation — 2026-05-22
 - **What**: Claude Code's `/diff` detail pane can now be scrolled with keyboard shortcuts (arrows, `j`/`k`, `PgUp`/`PgDn`, `Space`, `Home`/`End`), replacing mouse-only navigation
 - **Situations**: reviewing large multi-file diffs without leaving the keyboard, navigating diff output during terminal-only or remote sessions, power users keeping hands off the mouse during code review

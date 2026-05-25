@@ -128,6 +128,9 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 |-----------|---------|------|
 | Grounding a financial research agent in primary SEC filings with citations | Web Search Tool SEC Filing Data | 2026-05-18 |
 | Earnings analysis or due-diligence workflows requiring cited primary sources | Web Search Tool SEC Filing Data | 2026-05-18 |
+| Evaluating Claude Mythos for large-scale defensive security analysis before requesting access | Project Glasswing: First Quantified Results | 2026-05-22 |
+| Benchmarking AI-assisted vulnerability discovery against human researcher baselines | Project Glasswing: First Quantified Results | 2026-05-22 |
+| Tracking Anthropic's cybersecurity research progress ahead of a broader Mythos release | Project Glasswing: First Quantified Results | 2026-05-22 |
 | Defensive cybersecurity analysis | Claude Mythos Preview | 2026-04-07 |
 | Identifying vulnerabilities in critical software | Claude Mythos Preview | 2026-04-07 |
 | Security research requiring advanced reasoning | Claude Mythos Preview | 2026-04-07 |

@@ -43,6 +43,18 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Scripting Claude Code session management workflows with `jq` or shell tools | `claude agents --json` | 2026-05-19 |
 | Combining cloud and local MCP connectors in a managed enterprise Claude Code deployment | `allowAllClaudeAiMcps` Enterprise MCP Setting | 2026-05-22 |
 | Enabling claude.ai cloud MCPs for users under managed IT policies | `allowAllClaudeAiMcps` Enterprise MCP Setting | 2026-05-22 |
+| Creating a skill that prevents Claude from using write or execute tools | `disallowed-tools` Frontmatter for Skills | 2026-05-27 |
+| Building least-privilege slash commands that restrict available tools | `disallowed-tools` Frontmatter for Skills | 2026-05-27 |
+| Auto-labeling Claude Code session windows by branch or project in a terminal multiplexer | `SessionStart` Session Title & Skills Reload | 2026-05-27 |
+| Installing skills via a SessionStart hook and using them immediately without restarting | `SessionStart` Session Title & Skills Reload | 2026-05-27 |
+| Filtering sensitive patterns from Claude's terminal output for compliance | `MessageDisplay` Hook Event | 2026-05-27 |
+| Post-processing Claude's response text through a custom renderer or redaction wrapper | `MessageDisplay` Hook Event | 2026-05-27 |
+| Restricting context-aware plugin suggestions to vetted internal org marketplaces | `pluginSuggestionMarketplaces` Managed Setting | 2026-05-27 |
+| Preventing Claude Code from surfacing third-party plugins in enterprise deployments | `pluginSuggestionMarketplaces` Managed Setting | 2026-05-27 |
+| Onboarding new users to auto mode without a consent prompt friction gate | Auto Mode No Longer Requires Opt-In | 2026-05-27 |
+| Deploying auto mode in headless or automated environments | Auto Mode No Longer Requires Opt-In | 2026-05-27 |
+| CI/CD pipelines needing resilience when the primary model endpoint is unavailable | Fallback Model Automatic Session Switch | 2026-05-27 |
+| Preventing long Claude Code sessions from breaking entirely during a model outage | Fallback Model Automatic Session Switch | 2026-05-27 |
 
 ## Development & API
 
@@ -113,6 +125,10 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Comparing two similar plugins on feature breadth before installing | `/plugin` Pre-Installation Details | 2026-05-19 |
 | Checking whether a plugin exposes MCP servers before adding it to a team setup | `/plugin` Pre-Installation Details | 2026-05-19 |
 | Running a quick vs. deep code review in the same session without changing global effort | `/code-review` Command with Effort Level | 2026-05-21 |
+| Automatically applying code quality improvements from a review to the working tree | `/code-review --fix` Apply Mode | 2026-05-27 |
+| Using `/simplify` to find and apply reuse/simplification improvements in one shot | `/code-review --fix` Apply Mode | 2026-05-27 |
+| Reloading custom skills mid-session after editing a skill file | `/reload-skills` Command | 2026-05-27 |
+| Picking up a newly added skill from a shared directory without restarting Claude Code | `/reload-skills` Command | 2026-05-27 |
 | Keyboard-navigating large diffs in Claude Code without switching to the mouse | `/diff` Detail View Keyboard Navigation | 2026-05-22 |
 | Reading AI-generated task lists or action plans as visual checkboxes in Claude Code output | GFM Task List Rendering in Claude Code | 2026-05-22 |
 | Identifying which plugins or subagents are consuming the most Claude Code quota | `/usage` Per-Category Breakdown | 2026-05-22 |

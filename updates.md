@@ -4,6 +4,54 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## `/code-review --fix` Apply Mode — 2026-05-27
+- **What**: `/code-review --fix` now applies review findings (reuse, simplification, efficiency) directly to the working tree after the review; `/simplify` is now an alias for `/code-review --fix`
+- **Situations**: automatically applying code quality suggestions from a review without manually implementing each one, using `/simplify` as a one-shot "find and apply improvements" command, pairing code review and auto-fix in a pre-commit or CI workflow
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `disallowed-tools` Frontmatter for Skills — 2026-05-27
+- **What**: Skills and slash commands can declare `disallowed-tools` in their frontmatter to remove specific tools from Claude's toolset while the skill is active
+- **Situations**: creating a "read-only audit" skill that disables all write/execute tools, scoping a focused research skill to prevent accidental file modifications, building least-privilege skills for sensitive codebases
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `/reload-skills` Command — 2026-05-27
+- **What**: New `/reload-skills` command re-scans skill directories and reloads all skills in the current session without requiring a restart
+- **Situations**: developing or editing a custom skill file and picking up changes live, adding a new skill to a shared directory mid-session, iterating quickly on slash command definitions during skill authoring
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `SessionStart` Hook: Session Title & Skills Reload — 2026-05-27
+- **What**: `SessionStart` hooks can now set the session's terminal window title via `hookSpecificOutput.sessionTitle` on startup/resume, and return `reloadSkills: true` to re-scan skill directories so hook-installed skills are immediately available in the same session
+- **Situations**: auto-labeling Claude Code sessions by branch or project name in a terminal multiplexer, installing skills from a `SessionStart` hook and making them usable without restarting, displaying context-aware window titles per repo or active task
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `MessageDisplay` Hook Event — 2026-05-27
+- **What**: New `MessageDisplay` hook that fires when assistant message text is being rendered, allowing hooks to transform or suppress the displayed output before the user sees it
+- **Situations**: filtering sensitive patterns from Claude's terminal output for compliance or privacy, post-processing Claude's response through a custom renderer or formatter, building redaction wrappers for regulated environments
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `pluginSuggestionMarketplaces` Managed Setting — 2026-05-27
+- **What**: New enterprise managed setting that lets admins allowlist specific org marketplaces whose plugins may be proactively suggested to users via context-aware tips; plugins outside the allowlist are not suggested
+- **Situations**: restricting context-aware plugin suggestions to approved internal marketplaces in enterprise deployments, preventing Claude Code from surfacing third-party plugins the org hasn't vetted, managing plugin discovery across a large developer org
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Auto Mode No Longer Requires Opt-In — 2026-05-27
+- **What**: Claude Code's auto mode now activates immediately without an explicit opt-in consent prompt
+- **Situations**: onboarding new users to auto mode without a friction gate, deploying auto mode in automated or headless environments where interactive prompts would block, simplifying Claude Code setup for teams rolling out auto mode org-wide
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Fallback Model Automatic Session Switch — 2026-05-27
+- **What**: When the configured primary model is not found (e.g. unavailable endpoint), Claude Code now automatically switches to `--fallback-model` for the rest of the session instead of failing every request
+- **Situations**: CI/CD pipelines that need resilience when a primary model endpoint is temporarily unavailable, teams with a cheaper fallback for capacity overflow, preventing long interactive sessions from breaking entirely during a model outage
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Project Glasswing: First Quantified Results — 2026-05-22
 - **What**: Anthropic's Project Glasswing published its first results: Claude Mythos Preview identified 10,000+ high/critical-severity vulnerabilities across widely-used open-source software (e.g. CVE-2026-5194 in wolfSSL), with 90.6% confirmed as valid true positives by independent security firms
 - **Situations**: evaluating Claude Mythos for large-scale defensive security analysis before requesting access, benchmarking AI-assisted vulnerability discovery against human researcher baselines, tracking Anthropic's cybersecurity research progress ahead of a broader Mythos release

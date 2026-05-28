@@ -55,6 +55,12 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Deploying auto mode in headless or automated environments | Auto Mode No Longer Requires Opt-In | 2026-05-27 |
 | CI/CD pipelines needing resilience when the primary model endpoint is unavailable | Fallback Model Automatic Session Switch | 2026-05-27 |
 | Preventing long Claude Code sessions from breaking entirely during a model outage | Fallback Model Automatic Session Switch | 2026-05-27 |
+| Building a status line script that adapts its output to terminal width | Status Line `COLUMNS`/`LINES` Env Vars | 2026-05-28 |
+| Writing terminal-width-aware Claude Code status plugins | Status Line `COLUMNS`/`LINES` Env Vars | 2026-05-28 |
+| Installing plugins from repos with heavy LFS assets on slow or metered networks | `skipLfs` Option for Plugin Marketplace Sources | 2026-05-28 |
+| Speeding up plugin installs in CI/CD environments where LFS content isn't needed | `skipLfs` Option for Plugin Marketplace Sources | 2026-05-28 |
+| Avoiding repeated macOS permission prompts after each Claude Code upgrade | macOS Background Agent Permission Persistence | 2026-05-28 |
+| Granting Claude Code background agents macOS Privacy permissions that survive upgrades | macOS Background Agent Permission Persistence | 2026-05-28 |
 
 ## Development & API
 

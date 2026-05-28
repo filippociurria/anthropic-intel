@@ -4,6 +4,24 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Status Line `COLUMNS`/`LINES` Env Vars — 2026-05-28
+- **What**: Status line commands now receive `COLUMNS` and `LINES` environment variables so scripts can dynamically size output to the terminal width
+- **Situations**: building status line scripts that adapt to narrow vs. wide terminals, displaying truncated or expanded info based on available columns, writing terminal-width-aware Claude Code status plugins
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `skipLfs` Option for Plugin Marketplace Sources — 2026-05-28
+- **What**: `github`/`git` plugin marketplace sources now accept a `skipLfs: true` option to skip Git LFS downloads during clone and update operations
+- **Situations**: installing plugins from repos with heavy LFS assets on slow or metered networks, speeding up plugin installs in CI/CD environments that don't need LFS content, reducing disk usage when managing plugin sources
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## macOS Background Agent Permission Persistence — 2026-05-28
+- **What**: Background agents now appear as "Claude Code" in macOS Privacy & Security settings and retain their permission grants across upgrades instead of losing them on each update
+- **Situations**: avoiding repeated macOS permission prompts after each Claude Code upgrade, granting background agents folder/camera/mic access once and keeping it, managing Claude Code permissions clearly in macOS System Settings
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## `/code-review --fix` Apply Mode — 2026-05-27
 - **What**: `/code-review --fix` now applies review findings (reuse, simplification, efficiency) directly to the working tree after the review; `/simplify` is now an alias for `/code-review --fix`
 - **Situations**: automatically applying code quality suggestions from a review without manually implementing each one, using `/simplify` as a one-shot "find and apply improvements" command, pairing code review and auto-fix in a pre-commit or CI workflow

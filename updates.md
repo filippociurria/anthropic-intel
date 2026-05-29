@@ -4,6 +4,66 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Security Guidance Plugin for Claude Code — 2026-05-27
+- **What**: Free first-party Claude Code plugin that scans for ~25 vulnerability classes (SQL injection, XSS, command injection, hardcoded secrets, etc.) at three levels: instant regex on file save, background model review per Claude turn, and commit-time sweep — with no model calls or cost at level 1
+- **Situations**: catching injection flaws and insecure patterns before they reach a PR, running automated security review on every AI-generated code change, reducing security comments in code review (reported 30–40% reduction internally)
+- **Tags**: [dev]
+- **Source**: https://www.helpnetsecurity.com/2026/05/27/anthropic-claude-code-security-guidance-plugin/
+
+## Claude Opus 4.8 — 2026-05-28
+- **What**: New most-capable Claude model with sharper judgment, stronger honesty about progress, 1M token context by default, 128k max output, adaptive thinking (triggers reasoning only when needed), and improved benchmarks across agentic coding (64.3%→69.2%), reasoning, and knowledge work
+- **Situations**: long-horizon agentic coding tasks requiring maximum intelligence, large-document analysis pipelines that benefit from the default 1M context window, migrating from Opus 4.7 (same $5/$25 per MTok pricing)
+- **Tags**: [dev, product]
+- **Source**: https://www.anthropic.com/news/claude-opus-4-8
+
+## Mid-Conversation System Messages — 2026-05-28
+- **What**: Opus 4.8 supports `role: "system"` messages at non-first positions in the `messages` array, preserving prompt cache hits when instructions change during a long-running session; no beta header required
+- **Situations**: multi-turn agents that need to inject new instructions without invalidating the cache prefix, long sessions where system context evolves over time, agentic pipelines dynamically adjusting Claude's behavior mid-task without losing cached tokens
+- **Tags**: [dev, automation]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Refusal Categories in `stop_details` — 2026-05-28
+- **What**: Opus 4.8 returns fine-grained refusal categories in `stop_details` when it declines a request, allowing applications to route different refusal types to different handling logic; no beta header required
+- **Situations**: production apps that need to distinguish policy refusals from capability limitations, routing blocked requests to human review vs. fallback logic, showing users context-specific messaging based on the refusal type
+- **Tags**: [dev]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Fast Mode for Opus 4.8 (Research Preview) — 2026-05-28
+- **What**: Opus 4.8 fast mode delivers 2.5× speed at 2× standard pricing — roughly 3× cheaper than fast mode was for Opus 4.6/4.7; research preview on the Claude API only; Max plan Claude Code users get this as the default
+- **Situations**: interactive agentic workflows needing frontier intelligence with reduced latency, high-volume Claude Code sessions on Max plan where fast mode is now on by default, evaluating cost/speed tradeoffs before the fast mode waitlist opens broadly
+- **Tags**: [dev, product]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Fast Mode for Opus 4.6 Deprecated — 2026-05-28
+- **What**: Fast mode for Claude Opus 4.6 is deprecated with removal approximately 30 days after the May 28 Opus 4.8 launch (~June 28, 2026); migrate to Opus 4.7 or Opus 4.8 fast mode
+- **Situations**: applications using `speed: "fast"` + `claude-opus-4-6` that need a migration window, auditing integrations before removal causes errors, planning upgrade timing to Opus 4.7 or 4.8 fast mode
+- **Tags**: [dev]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Claude Code Workflows (Research Preview) — 2026-05-28
+- **What**: Workflows let you define multi-step agentic plans; Claude can dynamically create a workflow that orchestrates up to 1,000 background sub-agents; view and manage runs with `/workflows`
+- **Situations**: automating complex multi-phase coding tasks that exceed what a single agent session can handle, orchestrating parallel sub-agents for large-scale refactors or cross-repo analysis, monitoring long-running agentic pipelines via the `/workflows` dashboard
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Prompt Cache Minimum 1,024 Tokens on Opus 4.8 — 2026-05-28
+- **What**: Prompt caching on Opus 4.8 requires a minimum of only 1,024 tokens (lower than on Opus 4.7), making caching accessible for shorter prompts
+- **Situations**: Opus 4.8 applications with moderate-length system prompts previously below the cacheable threshold, reducing per-turn cost for multi-turn workflows where the system prompt is 1k–5k tokens, optimizing caching eligibility when migrating from Opus 4.7 to 4.8
+- **Tags**: [dev, analytics]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Background Shell Commands via `! <command>` — 2026-05-28
+- **What**: Type `! <command>` in a Claude Code session to launch shell commands as a new background session; equivalent to `claude --bg --exec '<command>'` from the CLI
+- **Situations**: running a build or test suite in the background without blocking the current chat session, fire-and-forget deployments or scripts triggered from within Claude Code, chaining background shell jobs alongside agentic tasks
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Plugin `defaultEnabled: false` — 2026-05-28
+- **What**: Plugins can declare `defaultEnabled: false` in their manifest so they install but stay inactive until a user explicitly enables them via `/plugin` or `claude plugin enable`
+- **Situations**: distributing situational plugins to a team that should opt in rather than run for everyone, reducing default context overhead in shared Claude Code environments, marketplace plugins designed for specific workflows that shouldn't activate universally
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Status Line `COLUMNS`/`LINES` Env Vars — 2026-05-28
 - **What**: Status line commands now receive `COLUMNS` and `LINES` environment variables so scripts can dynamically size output to the terminal width
 - **Situations**: building status line scripts that adapt to narrow vs. wide terminals, displaying truncated or expanded info based on available columns, writing terminal-width-aware Claude Code status plugins

@@ -66,6 +66,25 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Long-horizon agentic coding tasks requiring the most capable Claude | Claude Opus 4.8 | 2026-05-28 |
+| Large-document analysis pipelines needing 1M context by default | Claude Opus 4.8 | 2026-05-28 |
+| Migrating from Opus 4.7 at the same pricing | Claude Opus 4.8 | 2026-05-28 |
+| Injecting updated instructions into a long Claude session without invalidating the cache prefix | Mid-Conversation System Messages | 2026-05-28 |
+| Multi-turn agents that need to dynamically adjust Claude's behavior mid-session | Mid-Conversation System Messages | 2026-05-28 |
+| Routing different types of declined requests to the right fallback or human review | Refusal Categories in `stop_details` | 2026-05-28 |
+| Showing users context-specific messaging when Claude declines a request | Refusal Categories in `stop_details` | 2026-05-28 |
+| Getting Opus 4.8 speed at 2.5× with a 2× price premium | Fast Mode for Opus 4.8 | 2026-05-28 |
+| Auditing integrations using Opus 4.6 fast mode before the ~June 28 removal deadline | Fast Mode for Opus 4.6 Deprecated | 2026-05-28 |
+| Automating complex multi-phase tasks with up to 1,000 parallel background sub-agents | Claude Code Workflows | 2026-05-28 |
+| Monitoring and managing long-running agentic pipelines from `/workflows` | Claude Code Workflows | 2026-05-28 |
+| Caching shorter Opus 4.8 prompts (1k–5k tokens) that fell below the Opus 4.7 minimum | Prompt Cache 1,024 Token Minimum on Opus 4.8 | 2026-05-28 |
+| Running a build or test in the background without blocking the current Claude Code session | Background Shell Commands `! <command>` | 2026-05-28 |
+| Launching fire-and-forget shell jobs from within a Claude Code conversation | Background Shell Commands `! <command>` | 2026-05-28 |
+| Distributing a plugin that should stay inactive until users explicitly opt in | Plugin `defaultEnabled: false` | 2026-05-28 |
+| Reducing default context overhead in shared Claude Code team environments | Plugin `defaultEnabled: false` | 2026-05-28 |
+
+| Situation | Feature | Date |
+|-----------|---------|------|
 | Manage multiple agent tasks on parallel branches simultaneously | Claude Code Parallel Sessions | 2026-04-14 |
 | Monitor a deploy in one pane while coding in another | Claude Code Parallel Sessions | 2026-04-14 |
 | Resume a complex session the next day without losing context | Session Recap (`/recap`) | 2026-04-14 |
@@ -148,6 +167,9 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Catching injection flaws and insecure patterns in code before they reach a PR | Security Guidance Plugin for Claude Code | 2026-05-27 |
+| Automatically reviewing every AI-generated code change for ~25 vulnerability classes | Security Guidance Plugin for Claude Code | 2026-05-27 |
+| Running instant, zero-cost vulnerability scanning on every file save in Claude Code | Security Guidance Plugin for Claude Code | 2026-05-27 |
 | Grounding a financial research agent in primary SEC filings with citations | Web Search Tool SEC Filing Data | 2026-05-18 |
 | Earnings analysis or due-diligence workflows requiring cited primary sources | Web Search Tool SEC Filing Data | 2026-05-18 |
 | Evaluating Claude Mythos for large-scale defensive security analysis before requesting access | Project Glasswing: First Quantified Results | 2026-05-22 |

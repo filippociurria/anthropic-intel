@@ -4,6 +4,48 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Anthropic Series H: $65B Round at $965B Valuation — 2026-05-29
+- **What**: Anthropic raised a $65B Series H at a $965B valuation (led by Altimeter, Dragoneer, Greenoaks, Sequoia), making it the most valuable AI startup globally and positioning it for an IPO race against OpenAI
+- **Situations**: enterprise teams assessing Anthropic's long-term viability before multi-year platform commitments, tracking competitive dynamics between Claude and GPT as both companies race toward an IPO, benchmarking Anthropic's scale and financial runway for strategic planning
+- **Tags**: [product]
+- **Source**: https://www.thestreet.com/technology/anthropic-drops-new-claude-model-as-openai-ipo-race-heats-up
+
+## Managed Agents Full Stack on Claude Platform on AWS — 2026-05-29
+- **What**: Webhooks, multiagent orchestration, and self-hosted sandboxes for Claude Managed Agents are now available on Claude Platform on AWS, with new IAM actions and the `AnthropicSelfHostedEnvironmentAccess` managed policy
+- **Situations**: AWS-native teams needing full Managed Agents orchestration (webhooks, sub-agents, custom sandboxes) under AWS billing and IAM, enterprises running self-hosted agent sandboxes on AWS for data-residency compliance, deploying multiagent workflows without a separate Anthropic account
+- **Tags**: [dev, automation]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Auto-loading Local Plugins + `claude plugin init` — 2026-05-29
+- **What**: Plugins in `.claude/skills` directories are now automatically loaded without marketplace registration; `claude plugin init <name>` scaffolds a new plugin in that directory; `/plugin` autocomplete now covers subcommands, installed plugin names, and marketplace plugins
+- **Situations**: creating and testing a custom team plugin locally without publishing to a marketplace, quickly scaffolding a new skill file in a project's `.claude/skills` folder, improving discoverability of installed and marketplace plugins via autocomplete
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `EnterWorktree` Mid-Session Switch — 2026-05-29
+- **What**: The `EnterWorktree` tool can now switch between Claude-managed git worktrees mid-session; worktrees are left unlocked on completion for manual cleanup via `git worktree remove`/`prune`
+- **Situations**: switching between feature branches inside a single Claude Code session without restarting, managing parallel work across multiple worktrees from one conversation, cleaning up worktrees after Claude finishes without worrying about locks
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `/plugin` Discover Tab Context Pinning — 2026-05-28
+- **What**: The `/plugin` Discover tab now pins plugins relevant to the current working directory at the top, annotated "suggested for this directory," so context-appropriate plugins surface first
+- **Situations**: discovering the right plugin for the current project type (e.g., a Rails plugin when in a Rails repo) without browsing the full marketplace, onboarding to a new codebase and getting plugin suggestions automatically, reducing time spent searching for project-relevant tools
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Lean System Prompt as Default — 2026-05-28
+- **What**: Claude Code now uses a leaner system prompt by default for all models except Claude Haiku, Sonnet, and Opus 4.7 and earlier (including Opus 4.8 and newer), reducing context overhead per turn
+- **Situations**: Opus 4.8 users automatically benefiting from reduced per-turn token overhead, sessions where a smaller system prompt frees context for longer tool results and file content, diagnosing unexpected behavior changes when upgrading to Opus 4.8
+- **Tags**: [dev, product]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Stdio MCP Servers Receive Session Env Vars — 2026-05-28
+- **What**: Stdio MCP servers now receive `CLAUDE_CODE_SESSION_ID` and `CLAUDECODE=1` environment variables, enabling MCP servers to identify the calling Claude Code session
+- **Situations**: MCP server developers scoping per-session state or logging tied to the current Claude Code session, building session-aware MCP tools that behave differently per session, correlating MCP server logs with specific Claude Code session IDs for debugging
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Security Guidance Plugin for Claude Code — 2026-05-27
 - **What**: Free first-party Claude Code plugin that scans for ~25 vulnerability classes (SQL injection, XSS, command injection, hardcoded secrets, etc.) at three levels: instant regex on file save, background model review per Claude turn, and commit-time sweep — with no model calls or cost at level 1
 - **Situations**: catching injection flaws and insecure patterns before they reach a PR, running automated security review on every AI-generated code change, reducing security comments in code review (reported 30–40% reduction internally)

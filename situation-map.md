@@ -61,11 +61,23 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Speeding up plugin installs in CI/CD environments where LFS content isn't needed | `skipLfs` Option for Plugin Marketplace Sources | 2026-05-28 |
 | Avoiding repeated macOS permission prompts after each Claude Code upgrade | macOS Background Agent Permission Persistence | 2026-05-28 |
 | Granting Claude Code background agents macOS Privacy permissions that survive upgrades | macOS Background Agent Permission Persistence | 2026-05-28 |
+| Deploying full Managed Agents (webhooks, multiagent orchestration, self-hosted sandboxes) under AWS billing and IAM | Managed Agents Full Stack on Claude Platform on AWS | 2026-05-29 |
+| Enterprises running Managed Agent sandboxes on AWS for data-residency compliance | Managed Agents Full Stack on Claude Platform on AWS | 2026-05-29 |
+| Creating and testing a custom team plugin locally without publishing to a marketplace | Auto-loading Local Plugins + `claude plugin init` | 2026-05-29 |
+| Scaffolding a new Claude Code plugin in a project's `.claude/skills` folder | Auto-loading Local Plugins + `claude plugin init` | 2026-05-29 |
+| Switching between git feature branches inside a single Claude Code session without restarting | `EnterWorktree` Mid-Session Switch | 2026-05-29 |
+| Cleaning up Claude-managed git worktrees after session completion without worrying about locks | `EnterWorktree` Mid-Session Switch | 2026-05-29 |
+| Building session-aware MCP tools that identify the calling Claude Code session | Stdio MCP Session Env Vars | 2026-05-28 |
+| Correlating MCP server logs with specific Claude Code session IDs for debugging | Stdio MCP Session Env Vars | 2026-05-28 |
 
 ## Development & API
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Discovering project-relevant plugins automatically when entering a new codebase | `/plugin` Discover Tab Context Pinning | 2026-05-28 |
+| Surfacing context-appropriate plugins without browsing the full marketplace | `/plugin` Discover Tab Context Pinning | 2026-05-28 |
+| Reducing per-turn token overhead for Opus 4.8 sessions in Claude Code | Lean System Prompt as Default | 2026-05-28 |
+| Diagnosing unexpected Claude Code behavior changes after upgrading to Opus 4.8 | Lean System Prompt as Default | 2026-05-28 |
 | Long-horizon agentic coding tasks requiring the most capable Claude | Claude Opus 4.8 | 2026-05-28 |
 | Large-document analysis pipelines needing 1M context by default | Claude Opus 4.8 | 2026-05-28 |
 | Migrating from Opus 4.7 at the same pricing | Claude Opus 4.8 | 2026-05-28 |
@@ -162,6 +174,13 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Identifying why prompt cache isn't hitting between conversation turns | Cache Diagnostics (Public Beta) | 2026-05-13 |
 | Teams relying on Stainless-hosted SDK generation planning migration before shutdown | Anthropic Acquires Stainless | 2026-05-18 |
 | Tracking Anthropic's SDK toolchain ownership and developer ecosystem investment | Anthropic Acquires Stainless | 2026-05-18 |
+
+## Funding & Company News
+
+| Situation | Feature | Date |
+|-----------|---------|------|
+| Assessing Anthropic's financial runway before a multi-year platform commitment | Anthropic Series H ($65B / $965B valuation) | 2026-05-29 |
+| Tracking the Claude vs. GPT competitive landscape ahead of potential IPOs | Anthropic Series H ($65B / $965B valuation) | 2026-05-29 |
 
 ## Research & Security
 

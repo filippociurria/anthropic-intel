@@ -4,6 +4,24 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Auto Mode on Bedrock, Vertex, and Foundry — 2026-05-30
+- **What**: Claude Code auto mode (background safety checks replacing interactive permission prompts) is now available for Bedrock, Vertex, and Foundry deployments on Opus 4.7 and Opus 4.8; opt in with `CLAUDE_CODE_ENABLE_AUTO_MODE=1`
+- **Situations**: enterprise Bedrock/Vertex/Foundry teams enabling auto mode without needing a separate Claude API account, deploying auto mode in cloud-provider Claude Code environments for unattended agentic workflows, testing auto mode on Opus 4.8 across AWS/GCP/Azure-backed endpoints
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `--agent` Flag + `agent` Field in settings.json for Dispatched Sessions — 2026-05-29
+- **What**: The `agent` field in `settings.json` is now honored for dispatched background sessions; `--agent <name>` on the CLI overrides the configured agent at launch time
+- **Situations**: enforcing a named agent persona per project via settings.json so every background session uses the right config, overriding the default agent for a one-off dispatched task without editing config files, teams managing multiple specialized agent configs across different repos or monorepo subdirectories
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `OTEL_LOG_TOOL_DETAILS` for Tool Decision Telemetry — 2026-05-29
+- **What**: Setting `OTEL_LOG_TOOL_DETAILS=1` causes `tool_decision` telemetry events to include full `tool_parameters` (bash commands, MCP/skill names), enabling detailed observability of Claude Code's tool calls in OpenTelemetry pipelines
+- **Situations**: tracing which exact shell commands and MCP calls Claude Code executes during a session for audit logging, debugging unexpected tool invocations in long agentic runs via an OTEL backend, building per-tool usage dashboards for enterprise Claude Code observability
+- **Tags**: [dev, analytics]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Anthropic Series H: $65B Round at $965B Valuation — 2026-05-29
 - **What**: Anthropic raised a $65B Series H at a $965B valuation (led by Altimeter, Dragoneer, Greenoaks, Sequoia), making it the most valuable AI startup globally and positioning it for an IPO race against OpenAI
 - **Situations**: enterprise teams assessing Anthropic's long-term viability before multi-year platform commitments, tracking competitive dynamics between Claude and GPT as both companies race toward an IPO, benchmarking Anthropic's scale and financial runway for strategic planning

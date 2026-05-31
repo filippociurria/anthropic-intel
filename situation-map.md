@@ -69,6 +69,12 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Cleaning up Claude-managed git worktrees after session completion without worrying about locks | `EnterWorktree` Mid-Session Switch | 2026-05-29 |
 | Building session-aware MCP tools that identify the calling Claude Code session | Stdio MCP Session Env Vars | 2026-05-28 |
 | Correlating MCP server logs with specific Claude Code session IDs for debugging | Stdio MCP Session Env Vars | 2026-05-28 |
+| Enterprise Bedrock/Vertex/Foundry teams enabling Claude Code auto mode without a separate API account | Auto Mode on Bedrock/Vertex/Foundry | 2026-05-30 |
+| Deploying auto mode in cloud-provider Claude Code environments for unattended agentic workflows | Auto Mode on Bedrock/Vertex/Foundry | 2026-05-30 |
+| Enforcing a named agent persona per project so every background session uses the right config | `--agent` Flag + `agent` in settings.json | 2026-05-29 |
+| Overriding the default agent for a one-off dispatched task without editing config files | `--agent` Flag + `agent` in settings.json | 2026-05-29 |
+| Tracing exact shell commands and MCP calls Claude Code executes for enterprise audit logging | `OTEL_LOG_TOOL_DETAILS` Tool Decision Telemetry | 2026-05-29 |
+| Building per-tool usage dashboards for Claude Code in an OpenTelemetry observability stack | `OTEL_LOG_TOOL_DETAILS` Tool Decision Telemetry | 2026-05-29 |
 
 ## Development & API
 

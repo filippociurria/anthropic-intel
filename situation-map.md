@@ -71,6 +71,12 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Correlating MCP server logs with specific Claude Code session IDs for debugging | Stdio MCP Session Env Vars | 2026-05-28 |
 | Enterprise Bedrock/Vertex/Foundry teams enabling Claude Code auto mode without a separate API account | Auto Mode on Bedrock/Vertex/Foundry | 2026-05-30 |
 | Deploying auto mode in cloud-provider Claude Code environments for unattended agentic workflows | Auto Mode on Bedrock/Vertex/Foundry | 2026-05-30 |
+| Preventing Claude Code from silently modifying shell startup files that affect command execution | Security Prompts for Shell Startup & Build-Config Writes | 2026-06-02 |
+| Auditing which build-tool config files Claude writes in auto-approved (`acceptEdits`) sessions | Security Prompts for Shell Startup & Build-Config Writes | 2026-06-02 |
+| Triggering Claude Code's dynamic multi-agent workflow mode using the new `ultracode` keyword | `ultracode` Dynamic Workflow Trigger | 2026-06-02 |
+| Diagnosing why "workflow" prompts no longer spawn sub-agents after upgrading Claude Code | `ultracode` Dynamic Workflow Trigger | 2026-06-02 |
+| Editing a file immediately after grepping for a symbol without a separate Read round-trip | Edit after Grep (No Pre-Read Required) | 2026-06-02 |
+| Reducing unnecessary read operations in agentic grep-then-patch workflows | Edit after Grep (No Pre-Read Required) | 2026-06-02 |
 | Enforcing a named agent persona per project so every background session uses the right config | `--agent` Flag + `agent` in settings.json | 2026-05-29 |
 | Overriding the default agent for a one-off dispatched task without editing config files | `--agent` Flag + `agent` in settings.json | 2026-05-29 |
 | Tracing exact shell commands and MCP calls Claude Code executes for enterprise audit logging | `OTEL_LOG_TOOL_DETAILS` Tool Decision Telemetry | 2026-05-29 |

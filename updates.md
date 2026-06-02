@@ -4,6 +4,24 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Security Prompts for Shell Startup & Build-Config Writes — 2026-06-02
+- **What**: Claude Code now shows a confirmation prompt before writing to shell startup files (`.zshenv`, `.zlogin`, `.bash_login`, `~/.config/git/`) and, in `acceptEdits` mode, before writing build-tool config files that grant code execution (`.npmrc`, `.yarnrc*`, `bunfig.toml`, `.bazelrc`, `.pre-commit-config.yaml`, `.devcontainer/`, etc.)
+- **Situations**: preventing silent modification of shell startup scripts that could lead to unintended command execution, auditing what build-tool configs Claude writes in auto-approved sessions, maintaining security awareness when Claude touches files with elevated execution authority
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `ultracode` Replaces `workflow` as Dynamic Workflow Trigger — 2026-06-02
+- **What**: The trigger keyword for Claude Code's dynamic multi-agent workflow mode is renamed from `workflow` to `ultracode`; typing "workflow" no longer activates it, but describing a workflow in plain language still works; the keyword is highlighted in violet in the prompt input
+- **Situations**: triggering a dynamic workflow run using the new `ultracode` keyword, diagnosing why a previous "workflow" prompt no longer spawns sub-agents after upgrading, discovering the violet highlight as a visual cue that ultracode mode is active
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Edit after Grep — No Pre-Read Required — 2026-06-02
+- **What**: Single-file `grep`/`egrep`/`fgrep` commands now satisfy Claude Code's read-before-edit check, so a file viewed via grep no longer requires a separate Read call before it can be edited
+- **Situations**: editing a file immediately after grepping for a symbol without an extra round-trip, agentic workflows that grep then patch specific lines in one step, reducing unnecessary read operations in large codebases
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Auto Mode on Bedrock, Vertex, and Foundry — 2026-05-30
 - **What**: Claude Code auto mode (background safety checks replacing interactive permission prompts) is now available for Bedrock, Vertex, and Foundry deployments on Opus 4.7 and Opus 4.8; opt in with `CLAUDE_CODE_ENABLE_AUTO_MODE=1`
 - **Situations**: enterprise Bedrock/Vertex/Foundry teams enabling auto mode without needing a separate Claude API account, deploying auto mode in cloud-provider Claude Code environments for unattended agentic workflows, testing auto mode on Opus 4.8 across AWS/GCP/Azure-backed endpoints

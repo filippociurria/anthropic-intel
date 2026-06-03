@@ -81,11 +81,19 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Overriding the default agent for a one-off dispatched task without editing config files | `--agent` Flag + `agent` in settings.json | 2026-05-29 |
 | Tracing exact shell commands and MCP calls Claude Code executes for enterprise audit logging | `OTEL_LOG_TOOL_DETAILS` Tool Decision Telemetry | 2026-05-29 |
 | Building per-tool usage dashboards for Claude Code in an OpenTelemetry observability stack | `OTEL_LOG_TOOL_DETAILS` Tool Decision Telemetry | 2026-05-29 |
+| Segmenting Claude Code usage metrics by team or repository in a shared OTEL backend | `OTEL_RESOURCE_ATTRIBUTES` as Metric Labels | 2026-06-02 |
+| Building per-team cost dashboards by attaching custom resource attribute labels to metrics | `OTEL_RESOURCE_ATTRIBUTES` as Metric Labels | 2026-06-02 |
+| Agentic workflows fanning out parallel Bash calls that should continue even if one fails | Parallel Tool Call Independence | 2026-06-02 |
+| Preventing a single failed tool call from masking results from other parallel batch tools | Parallel Tool Call Independence | 2026-06-02 |
 
 ## Development & API
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Reducing cost and latency in agentic pipelines by capping the advisor model's output length | Advisor Tool `max_tokens` Parameter | 2026-06-02 |
+| Controlling advisor response length to get only a brief strategic hint at lower token cost | Advisor Tool `max_tokens` Parameter | 2026-06-02 |
+| Avoiding charges for API requests that are refused before Claude generates any output | No Billing for Zero-Output Refusals | 2026-06-02 |
+| High-volume moderation pipelines that need to track refusal rates without incurring extra cost | No Billing for Zero-Output Refusals | 2026-06-02 |
 | Discovering project-relevant plugins automatically when entering a new codebase | `/plugin` Discover Tab Context Pinning | 2026-05-28 |
 | Surfacing context-appropriate plugins without browsing the full marketplace | `/plugin` Discover Tab Context Pinning | 2026-05-28 |
 | Reducing per-turn token overhead for Opus 4.8 sessions in Claude Code | Lean System Prompt as Default | 2026-05-28 |
@@ -206,6 +214,8 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Evaluating Claude Mythos for large-scale defensive security analysis before requesting access | Project Glasswing: First Quantified Results | 2026-05-22 |
 | Benchmarking AI-assisted vulnerability discovery against human researcher baselines | Project Glasswing: First Quantified Results | 2026-05-22 |
 | Tracking Anthropic's cybersecurity research progress ahead of a broader Mythos release | Project Glasswing: First Quantified Results | 2026-05-22 |
+| Critical infrastructure operators (power, water, healthcare, comms) seeking Glasswing access | Project Glasswing Expansion: 150 New Orgs | 2026-06-02 |
+| Tracking Anthropic's scaling of AI vulnerability discovery to ICS/OT and critical infrastructure | Project Glasswing Expansion: 150 New Orgs | 2026-06-02 |
 | Defensive cybersecurity analysis | Claude Mythos Preview | 2026-04-07 |
 | Identifying vulnerabilities in critical software | Claude Mythos Preview | 2026-04-07 |
 | Security research requiring advanced reasoning | Claude Mythos Preview | 2026-04-07 |

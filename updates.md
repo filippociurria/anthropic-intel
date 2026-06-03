@@ -4,6 +4,36 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Project Glasswing Expansion: 150 New Orgs, 15+ Countries — 2026-06-02
+- **What**: Anthropic expanded Project Glasswing to ~150 new organizations across 15+ countries, prioritizing critical infrastructure sectors (power, water, healthcare, communications, hardware) that were under-represented in the initial cohort; Claude Mythos remains the tool powering vulnerability discovery
+- **Situations**: critical infrastructure operators in newly added sectors seeking access to Glasswing for defensive security, tracking Anthropic's scaling of AI-assisted vulnerability discovery to ICS/OT environments, benchmarking the program's growing reach before the next application window
+- **Tags**: [research, product]
+- **Source**: https://www.anthropic.com/news/expanding-project-glasswing
+
+## Advisor Tool `max_tokens` Parameter — 2026-06-02
+- **What**: The advisor tool now accepts a `max_tokens` field on the tool definition to cap the advisor model's output per call, reducing latency and output token cost for workloads that don't need full-length advisor responses
+- **Situations**: reducing cost and latency in high-volume agentic pipelines that pair a fast executor with an Opus advisor, capping advisor responses for tasks where a short strategic hint suffices, fine-tuning the cost/speed tradeoff when only brief advisor guidance is needed
+- **Tags**: [dev, analytics]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## No Billing for Zero-Output Refusals — 2026-06-02
+- **What**: The Claude API no longer charges for requests that return `stop_reason: "refusal"` with zero generated output tokens — the request is free if Claude declines before producing any content
+- **Situations**: high-volume content moderation pipelines where a fraction of requests are refused before output, production apps tracking refusal rates without accruing cost from blocked requests, reducing unexpected charges when policy guardrails fire early
+- **Tags**: [dev, analytics]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## `OTEL_RESOURCE_ATTRIBUTES` as Metric Labels — 2026-06-02
+- **What**: `OTEL_RESOURCE_ATTRIBUTES` values are now included as labels on Claude Code metric datapoints, enabling custom dimensions (e.g., `team`, `repo`) to slice and filter usage metrics in OpenTelemetry pipelines
+- **Situations**: segmenting Claude Code usage metrics by team or repository in a shared OTEL backend, building per-team cost dashboards without a separate tagging mechanism, correlating Claude Code activity with other OpenTelemetry instrumentation in the same stack
+- **Tags**: [dev, analytics]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Parallel Tool Call Independence — 2026-06-02
+- **What**: A failed Bash command in Claude Code no longer cancels other tool calls in the same parallel batch — each tool now returns its own result independently, improving reliability of fanned-out tool use
+- **Situations**: agentic workflows that fan out multiple Bash calls in parallel and should continue even if one fails, debugging parallel tool batches where a single bad command previously masked all results, building more resilient multi-tool pipelines that don't fail atomically
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Security Prompts for Shell Startup & Build-Config Writes — 2026-06-02
 - **What**: Claude Code now shows a confirmation prompt before writing to shell startup files (`.zshenv`, `.zlogin`, `.bash_login`, `~/.config/git/`) and, in `acceptEdits` mode, before writing build-tool config files that grant code execution (`.npmrc`, `.yarnrc*`, `bunfig.toml`, `.bazelrc`, `.pre-commit-config.yaml`, `.devcontainer/`, etc.)
 - **Situations**: preventing silent modification of shell startup scripts that could lead to unintended command execution, auditing what build-tool configs Claude writes in auto-approved sessions, maintaining security awareness when Claude touches files with elevated execution authority

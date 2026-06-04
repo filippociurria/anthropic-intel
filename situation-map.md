@@ -85,6 +85,13 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Building per-team cost dashboards by attaching custom resource attribute labels to metrics | `OTEL_RESOURCE_ATTRIBUTES` as Metric Labels | 2026-06-02 |
 | Agentic workflows fanning out parallel Bash calls that should continue even if one fails | Parallel Tool Call Independence | 2026-06-02 |
 | Preventing a single failed tool call from masking results from other parallel batch tools | Parallel Tool Call Independence | 2026-06-02 |
+| Detecting when a background Claude Code agent is stuck waiting on a permission prompt | `waitingFor` Field in `claude agents --json` | 2026-06-03 |
+| Building dashboards that distinguish active from blocked/waiting Claude Code sessions | `waitingFor` Field in `claude agents --json` | 2026-06-03 |
+| Monitoring real-time fanout progress across parallel Claude Code sub-agents at a glance | `claude agents` Fanout Progress Display | 2026-06-02 |
+| Identifying the bottleneck sub-task during a large parallel agentic run | `claude agents` Fanout Progress Display | 2026-06-02 |
+| API/SDK integrations that need native Grep/Glob search in restricted tool sets | Grep/Glob via `--tools` Dedicated Search | 2026-06-03 |
+| Previewing and editing a slash command before running it (adding arguments first) | Slash Command Autocomplete Fill | 2026-06-03 |
+| Avoiding accidental immediate slash command execution when browsing the autocomplete menu | Slash Command Autocomplete Fill | 2026-06-03 |
 
 ## Development & API
 

@@ -4,6 +4,30 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## `waitingFor` Field in `claude agents --json` — 2026-06-03
+- **What**: `claude agents --json` now includes a `waitingFor` field indicating what a waiting session is blocked on (e.g., a pending permission prompt), enabling scripts to detect and act on stalled agents
+- **Situations**: monitoring scripts that need to detect when a background agent is stuck on a permission prompt, building dashboards that distinguish active from blocked sessions, automating unblocking flows or alert escalations for stalled agentic runs
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Slash Command Autocomplete Fill (No Immediate Run) — 2026-06-03
+- **What**: Clicking a slash command in the autocomplete menu now fills it into the prompt input rather than executing immediately; press Enter to run — preventing accidental immediate invocation while browsing commands
+- **Situations**: previewing and editing a slash command before running it, adding arguments to a command (e.g., `/code-review high`) before execution, avoiding accidental invocations when exploring available slash commands
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Grep/Glob via `--tools` Provides Dedicated Search Tools — 2026-06-03
+- **What**: Explicitly listing `Grep` or `Glob` in `--tools` on native Claude Code builds now surfaces them as dedicated first-class search tools rather than falling back to shell commands
+- **Situations**: API/SDK integrations that explicitly enumerate allowed tools and need reliable native search, building restricted tool sets that include structured search without Bash, diagnosing why search behaves differently across tool-explicit vs. default sessions
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `claude agents` Fanout Progress Display — 2026-06-02
+- **What**: `claude agents` rows now show a `done/total` progress counter when work is fanned out across sub-agents; the peek view highlights the longest-running item in the batch
+- **Situations**: monitoring real-time progress of parallel Claude Code workflows without opening individual session logs, identifying which sub-task is the bottleneck during a large fanned-out agentic run, tracking completion status at a glance across multi-agent refactors or batch analysis jobs
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Project Glasswing Expansion: 150 New Orgs, 15+ Countries — 2026-06-02
 - **What**: Anthropic expanded Project Glasswing to ~150 new organizations across 15+ countries, prioritizing critical infrastructure sectors (power, water, healthcare, communications, hardware) that were under-represented in the initial cohort; Claude Mythos remains the tool powering vulnerability discovery
 - **Situations**: critical infrastructure operators in newly added sectors seeking access to Glasswing for defensive security, tracking Anthropic's scaling of AI-assisted vulnerability discovery to ICS/OT environments, benchmarking the program's growing reach before the next application window

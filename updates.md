@@ -4,6 +4,42 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Background Agent Sessions Auto-Update — 2026-06-04
+- **What**: Background Claude Code agent sessions now automatically update to the latest Claude Code version while running in the background, without interrupting the session
+- **Situations**: keeping long-running background agents on the latest version without manual restarts, avoiding version drift in persistent background sessions, ensuring background agents pick up security or bug-fix releases automatically
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `Stop`/`SubagentStop` Hook `additionalContext` Output — 2026-06-04
+- **What**: `Stop` and `SubagentStop` hooks can now return `hookSpecificOutput.additionalContext` to inject structured feedback into Claude's next turn without triggering a hook error label
+- **Situations**: injecting post-run diagnostics or status back into Claude's context after a session stops, giving Claude structured feedback from a Stop hook without polluting the error channel, building richer stop-event pipelines that inform Claude's next run
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `/plugin list` Command — 2026-06-04
+- **What**: New `claude plugin list` command lists all installed plugins with optional `--enabled`/`--disabled` filters to quickly audit active vs. inactive plugins
+- **Situations**: auditing which plugins are active across a Claude Code setup, finding disabled plugins that need re-enabling, scripting plugin inventory checks across a team environment
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `requiredMinimumVersion`/`requiredMaximumVersion` Managed Settings — 2026-06-04
+- **What**: New Claude Code managed settings that refuse startup if the installed version falls outside an admin-specified min/max range, enforcing version compliance across an organization
+- **Situations**: enterprises enforcing a minimum Claude Code version after a security patch, blocking overly new versions pending IT vetting, ensuring consistent Claude Code versions across large developer orgs
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude Partner Network Services Track & Partner Hub — 2026-06-03
+- **What**: Anthropic launched a formal three-tier Services Track (Select/Preferred/Global Premier) and a Partner Hub portal for consulting and SI firms building on Claude, with daily-refreshed qualification metrics visible to both partners and enterprise buyers
+- **Situations**: enterprises finding pre-vetted Claude implementation partners by tier and region via the Partner Hub, consulting firms tracking certification count and deployed customers to qualify for tier promotions, channel partners planning their Claude practice against the January/July annual review cycle
+- **Tags**: [product]
+- **Source**: https://www.anthropic.com/news/services-track-partner-hub
+
+## AI-Enabled Cyber Threats MITRE ATT&CK Analysis — 2026-06-03
+- **What**: Anthropic published findings from 832 banned accounts over 12 months: the share of medium/high-risk actors using AI for cyber ops rose from 33% to 56%, with 67.3% using AI for malware writing; AI is shifting attack activity into post-compromise stages; Anthropic is in talks with MITRE to extend ATT&CK for AI-enabled techniques
+- **Situations**: security teams benchmarking AI-assisted threat actor TTPs against the MITRE ATT&CK framework, defenders prioritizing post-compromise controls as AI shifts attacker focus from initial access, enterprise risk teams tracking the evolving AI threat landscape ahead of ATT&CK framework updates
+- **Tags**: [research]
+- **Source**: https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack
+
 ## `waitingFor` Field in `claude agents --json` — 2026-06-03
 - **What**: `claude agents --json` now includes a `waitingFor` field indicating what a waiting session is blocked on (e.g., a pending permission prompt), enabling scripts to detect and act on stalled agents
 - **Situations**: monitoring scripts that need to detect when a background agent is stuck on a permission prompt, building dashboards that distinguish active from blocked sessions, automating unblocking flows or alert escalations for stalled agentic runs

@@ -85,6 +85,14 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Building per-team cost dashboards by attaching custom resource attribute labels to metrics | `OTEL_RESOURCE_ATTRIBUTES` as Metric Labels | 2026-06-02 |
 | Agentic workflows fanning out parallel Bash calls that should continue even if one fails | Parallel Tool Call Independence | 2026-06-02 |
 | Preventing a single failed tool call from masking results from other parallel batch tools | Parallel Tool Call Independence | 2026-06-02 |
+| Keeping long-running background Claude Code agents on the latest version without manual restarts | Background Agent Sessions Auto-Update | 2026-06-04 |
+| Ensuring background agents pick up security or bug-fix releases automatically | Background Agent Sessions Auto-Update | 2026-06-04 |
+| Injecting post-run diagnostics back into Claude's context from a Stop hook without a hook error | `Stop`/`SubagentStop` Hook `additionalContext` | 2026-06-04 |
+| Building stop-event pipelines that pass structured feedback into Claude's next run | `Stop`/`SubagentStop` Hook `additionalContext` | 2026-06-04 |
+| Auditing which Claude Code plugins are active vs. disabled across a team setup | `/plugin list` Command | 2026-06-04 |
+| Scripting plugin inventory checks or enabling/disabling via filter flags | `/plugin list` Command | 2026-06-04 |
+| Enterprises enforcing a minimum Claude Code version org-wide after a security patch | `requiredMinimumVersion`/`requiredMaximumVersion` Managed Settings | 2026-06-04 |
+| Blocking overly new Claude Code versions from being used pending IT vetting | `requiredMinimumVersion`/`requiredMaximumVersion` Managed Settings | 2026-06-04 |
 | Detecting when a background Claude Code agent is stuck waiting on a permission prompt | `waitingFor` Field in `claude agents --json` | 2026-06-03 |
 | Building dashboards that distinguish active from blocked/waiting Claude Code sessions | `waitingFor` Field in `claude agents --json` | 2026-06-03 |
 | Monitoring real-time fanout progress across parallel Claude Code sub-agents at a glance | `claude agents` Fanout Progress Display | 2026-06-02 |
@@ -206,6 +214,9 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Enterprises finding pre-vetted Claude consulting/SI partners by tier and region | Claude Partner Network Services Track & Partner Hub | 2026-06-03 |
+| Consulting firms tracking certification counts and deployments to qualify for tier promotion | Claude Partner Network Services Track & Partner Hub | 2026-06-03 |
+| Channel partners planning their Claude practice around the January/July tier review cycle | Claude Partner Network Services Track & Partner Hub | 2026-06-03 |
 | Assessing Anthropic's financial runway before a multi-year platform commitment | Anthropic Series H ($65B / $965B valuation) | 2026-05-29 |
 | Tracking the Claude vs. GPT competitive landscape ahead of potential IPOs | Anthropic Series H ($65B / $965B valuation) | 2026-05-29 |
 
@@ -221,6 +232,9 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Evaluating Claude Mythos for large-scale defensive security analysis before requesting access | Project Glasswing: First Quantified Results | 2026-05-22 |
 | Benchmarking AI-assisted vulnerability discovery against human researcher baselines | Project Glasswing: First Quantified Results | 2026-05-22 |
 | Tracking Anthropic's cybersecurity research progress ahead of a broader Mythos release | Project Glasswing: First Quantified Results | 2026-05-22 |
+| Security teams benchmarking AI-assisted threat actor TTPs against the MITRE ATT&CK framework | AI-Enabled Cyber Threats MITRE ATT&CK Analysis | 2026-06-03 |
+| Defenders prioritizing post-compromise controls as AI shifts attacker focus from initial access | AI-Enabled Cyber Threats MITRE ATT&CK Analysis | 2026-06-03 |
+| Enterprise risk teams tracking the evolving AI threat landscape ahead of ATT&CK framework updates | AI-Enabled Cyber Threats MITRE ATT&CK Analysis | 2026-06-03 |
 | Critical infrastructure operators (power, water, healthcare, comms) seeking Glasswing access | Project Glasswing Expansion: 150 New Orgs | 2026-06-02 |
 | Tracking Anthropic's scaling of AI vulnerability discovery to ICS/OT and critical infrastructure | Project Glasswing Expansion: 150 New Orgs | 2026-06-02 |
 | Defensive cybersecurity analysis | Claude Mythos Preview | 2026-04-07 |

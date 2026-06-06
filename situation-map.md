@@ -100,6 +100,13 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | API/SDK integrations that need native Grep/Glob search in restricted tool sets | Grep/Glob via `--tools` Dedicated Search | 2026-06-03 |
 | Previewing and editing a slash command before running it (adding arguments first) | Slash Command Autocomplete Fill | 2026-06-03 |
 | Avoiding accidental immediate slash command execution when browsing the autocomplete menu | Slash Command Autocomplete Fill | 2026-06-03 |
+| Production Claude Code sessions needing ordered multi-tier failover when the primary model is unavailable | `fallbackModel` Multi-Model Fallback Setting | 2026-06-06 |
+| Ensuring `--fallback-model` applies to interactive Claude Code sessions, not just CLI dispatches | `fallbackModel` Multi-Model Fallback Setting | 2026-06-06 |
+| Writing a single deny rule that blocks all tools in a restricted Claude Code context | Glob Patterns in Deny Rules | 2026-06-06 |
+| Getting startup warnings when deny rule entries reference tool names that don't exist | Glob Patterns in Deny Rules | 2026-06-06 |
+| Locking a Claude Code session to only approved MCP tools while blocking everything else with `"*"` | Glob Patterns in Deny Rules | 2026-06-06 |
+| Preventing privilege escalation when one Claude agent instructs another via SendMessage | Hardened Cross-Session Messaging | 2026-06-06 |
+| Security-auditing multi-agent pipelines where coordinating agents should not inherit each other's permissions | Hardened Cross-Session Messaging | 2026-06-06 |
 
 ## Development & API
 
@@ -172,6 +179,10 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Quickly adjusting effort level mid-session via keyboard | Interactive `/effort` Slider | 2026-04-16 |
 | Running PowerShell scripts natively in Claude Code on Windows | Claude Code PowerShell Tool | 2026-04-16 |
 | Windows-native shell automation without WSL | Claude Code PowerShell Tool | 2026-04-16 |
+| Disabling extended thinking on Opus 4.8 to cut latency and token cost for non-reasoning tasks | `--thinking disabled` / `MAX_THINKING_TOKENS=0` | 2026-06-06 |
+| Testing model behavior with and without extended thinking in the same Claude Code session | `--thinking disabled` / `MAX_THINKING_TOKENS=0` | 2026-06-06 |
+| Auditing codebases and CI/CD pipelines for hardcoded `claude-opus-4-1` model IDs before August 5, 2026 | Claude Opus 4.1 Deprecation | 2026-06-05 |
+| Planning migration from Opus 4.1 to Opus 4.8 within the two-month deprecation window | Claude Opus 4.1 Deprecation | 2026-06-05 |
 | Auditing integrations using `context-1m-2025-08-07` on Sonnet 4 / 4.5 before errors start | 1M Context Window Beta Retired | 2026-04-30 |
 | Migrating large-document pipelines from Sonnet 4/4.5 to Sonnet 4.6 or Opus 4.6 | 1M Context Window Beta Retired | 2026-04-30 |
 | Resuming a coding session by pasting a PR URL instead of searching history | PR URL in `/resume` | 2026-04-28 |

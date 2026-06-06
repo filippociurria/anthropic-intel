@@ -4,6 +4,36 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Hardened Cross-Session Messaging — 2026-06-06
+- **What**: Messages relayed via `SendMessage` from other Claude Code sessions no longer carry user authority, preventing privilege escalation in multi-agent setups where one agent instructs another
+- **Situations**: security-auditing multi-agent pipelines where agents coordinate via SendMessage but should not inherit each other's elevated permissions, enforcing strict permission boundaries across coordinating Claude Code agents, enterprise multi-agent architectures relying on subagent isolation
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `--thinking disabled` / `MAX_THINKING_TOKENS=0` — 2026-06-06
+- **What**: `MAX_THINKING_TOKENS=0`, `--thinking disabled`, and the per-model thinking toggle now disable extended thinking on models that reason by default (e.g., Opus 4.8), overriding the model's default-on reasoning
+- **Situations**: disabling reasoning on Opus 4.8 to cut latency and token cost for tasks that don't require deep thinking, testing model behavior with and without extended thinking in the same session, tuning cost vs. capability for high-volume pipelines using thinking-enabled models
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Glob Patterns in Deny Rules — 2026-06-06
+- **What**: Glob patterns now work in deny rule tool-name positions; `"*"` denies all tools; unknown tool names in deny rules now warn at startup instead of silently passing; allow rules reject non-MCP globs
+- **Situations**: writing a single deny rule that blocks all tool use in a restricted Claude Code context, catching typos in deny rules via startup warnings before they silently fail to block anything, locking down a Claude Code session to only approved MCP tools while blocking everything else
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `fallbackModel` Multi-Model Fallback Setting — 2026-06-06
+- **What**: New `fallbackModel` setting in Claude Code configures up to three fallback models tried in order when the primary model is overloaded or unavailable; `--fallback-model` now also applies to interactive sessions (previously CLI-only)
+- **Situations**: production Claude Code sessions needing multi-tier failover across multiple model endpoints, ensuring interactive sessions fall back gracefully when the primary model is overloaded, building resilient agentic pipelines with an explicit ordered fallback chain (e.g., Opus 4.8 → Opus 4.7 → Sonnet 4.6)
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Claude Opus 4.1 Deprecation — 2026-06-05
+- **What**: Anthropic announced deprecation of `claude-opus-4-1-20250805` with retirement on the Claude API scheduled for August 5, 2026; recommended migration target is Claude Opus 4.8
+- **Situations**: auditing codebases and CI/CD pipelines for hardcoded `claude-opus-4-1` model IDs before the August deadline, planning staged migration to Opus 4.8 within the two-month window, monitoring for 400 errors after August 5 if any integration is not updated
+- **Tags**: [dev]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
 ## Background Agent Sessions Auto-Update — 2026-06-04
 - **What**: Background Claude Code agent sessions now automatically update to the latest Claude Code version while running in the background, without interrupting the session
 - **Situations**: keeping long-running background agents on the latest version without manual restarts, avoiding version drift in persistent background sessions, ensuring background agents pick up security or bug-fix releases automatically

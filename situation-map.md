@@ -107,6 +107,14 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Locking a Claude Code session to only approved MCP tools while blocking everything else with `"*"` | Glob Patterns in Deny Rules | 2026-06-06 |
 | Preventing privilege escalation when one Claude agent instructs another via SendMessage | Hardened Cross-Session Messaging | 2026-06-06 |
 | Security-auditing multi-agent pipelines where coordinating agents should not inherit each other's permissions | Hardened Cross-Session Messaging | 2026-06-06 |
+| Diagnosing unexpected Claude Code behavior by isolating it from all plugins, hooks, and MCP servers | `--safe-mode` Flag | 2026-06-08 |
+| Reproducing a support issue in a clean Claude Code state without custom configs interfering | `--safe-mode` Flag | 2026-06-08 |
+| Switching to a subdirectory or sibling repo mid-session without losing the prompt cache prefix | `/cd` Session Directory Change | 2026-06-08 |
+| Navigating across multiple project directories in one long Claude Code session without restarting | `/cd` Session Directory Change | 2026-06-08 |
+| Running Claude Code with only custom slash commands visible by hiding all bundled skills | `disableBundledSkills` Setting | 2026-06-08 |
+| Building headless Claude Code integrations where bundled skills would introduce unwanted behavior | `disableBundledSkills` Setting | 2026-06-08 |
+| Building scripts or dashboards that query both live and completed background Claude Code sessions | `claude agents --json` `--all` + `id`/`state` | 2026-06-08 |
+| Filtering or routing background sessions by state (`id`, `state`) in automated pipelines | `claude agents --json` `--all` + `id`/`state` | 2026-06-08 |
 
 ## Development & API
 

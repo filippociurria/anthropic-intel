@@ -4,6 +4,30 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## `claude agents --json` `--all` Flag + `id`/`state` Fields — 2026-06-08
+- **What**: `claude agents --json` gains `--all` to include completed sessions alongside active ones; each session entry now exposes `id` and `state` fields for scripting
+- **Situations**: building dashboards or scripts that query both live and recently completed background sessions, filtering or routing sessions by state in automated pipelines, referencing sessions reliably by `id` instead of parsing display names
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `disableBundledSkills` Setting — 2026-06-08
+- **What**: New `disableBundledSkills` setting and `CLAUDE_CODE_DISABLE_BUNDLED_SKILLS` env var hide all bundled skills, workflows, and built-in slash commands from the model
+- **Situations**: running Claude Code with only custom or team-specific slash commands visible, reducing system-prompt overhead from bundled commands the team doesn't use, building headless integrations where bundled skills introduce unwanted behavior
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `/cd` Command for Session Directory Change — 2026-06-08
+- **What**: New `/cd` command moves a Claude Code session to a different working directory without breaking the prompt cache mid-session
+- **Situations**: switching to a subdirectory or sibling repo mid-session without losing the prompt cache prefix, navigating project structure across multiple directories in one long session, avoiding a restart just to change context to a different folder
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `--safe-mode` Flag — 2026-06-08
+- **What**: New `--safe-mode` flag and `CLAUDE_CODE_SAFE_MODE` env var start Claude Code with all customizations disabled — CLAUDE.md, plugins, skills, hooks, and MCP servers — for clean-state troubleshooting
+- **Situations**: diagnosing unexpected Claude Code behavior by isolating it from all plugins and hooks, reproducing a support issue without custom configs interfering, testing Claude Code in a clean state without project-level CLAUDE.md or MCP servers
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Hardened Cross-Session Messaging — 2026-06-06
 - **What**: Messages relayed via `SendMessage` from other Claude Code sessions no longer carry user authority, preventing privilege escalation in multi-agent setups where one agent instructs another
 - **Situations**: security-auditing multi-agent pipelines where agents coordinate via SendMessage but should not inherit each other's elevated permissions, enforcing strict permission boundaries across coordinating Claude Code agents, enterprise multi-agent architectures relying on subagent isolation

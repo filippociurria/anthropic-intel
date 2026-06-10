@@ -115,11 +115,24 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Building headless Claude Code integrations where bundled skills would introduce unwanted behavior | `disableBundledSkills` Setting | 2026-06-08 |
 | Building scripts or dashboards that query both live and completed background Claude Code sessions | `claude agents --json` `--all` + `id`/`state` | 2026-06-08 |
 | Filtering or routing background sessions by state (`id`, `state`) in automated pipelines | `claude agents --json` `--all` + `id`/`state` | 2026-06-08 |
+| Running nightly compliance-audit or data-processing agents on a cron without building scheduler infrastructure | Managed Agents Scheduled Deployments | 2026-06-09 |
+| Replacing cron + custom glue with a native Managed Agents cron scheduling feature | Managed Agents Scheduled Deployments | 2026-06-09 |
+| Routing webhook notifications per multi-agent thread using `session_thread_id` | Managed Agents Scheduled Deployments | 2026-06-09 |
+| Giving a Managed Agent secure access to third-party CLIs or SDKs without hardcoding credentials in prompts | Managed Agents Vault Env Var Credentials | 2026-06-09 |
+| Rotating Managed Agents secrets centrally in the vault without modifying agent code | Managed Agents Vault Env Var Credentials | 2026-06-09 |
+| Capturing uncommitted changes before a self-hosted runner workspace is cleaned up | Self-hosted Runner `post-session` Hook | 2026-06-08 |
+| Exporting Claude Code session logs or artifacts to an external store at session end in self-hosted runner | Self-hosted Runner `post-session` Hook | 2026-06-08 |
 
 ## Development & API
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Frontier-intelligence coding, research, and long-horizon agentic tasks at roughly half the original Mythos Preview cost | Claude Fable 5 & Mythos 5 | 2026-06-09 |
+| Large-document pipelines needing 1M context and up to 128k output tokens from Claude's most capable model | Claude Fable 5 & Mythos 5 | 2026-06-09 |
+| Auditing integrations that pass `thinking.disabled` or manual `budget_tokens` before migrating to Fable 5 | Claude Fable 5 & Mythos 5 | 2026-06-09 |
+| SwiftUI apps routing complex queries to Claude while keeping simpler ones on Apple's on-device model without changing session code | Apple Foundation Models Swift Package | 2026-06-09 |
+| Apple developers benchmarking on-device vs. Claude quality within the same Swift codebase | Apple Foundation Models Swift Package | 2026-06-09 |
+| Swapping between Claude and Apple's on-device model by updating a single SPM dependency | Apple Foundation Models Swift Package | 2026-06-09 |
 | Reducing cost and latency in agentic pipelines by capping the advisor model's output length | Advisor Tool `max_tokens` Parameter | 2026-06-02 |
 | Controlling advisor response length to get only a brief strategic hint at lower token cost | Advisor Tool `max_tokens` Parameter | 2026-06-02 |
 | Avoiding charges for API requests that are refused before Claude generates any output | No Billing for Zero-Output Refusals | 2026-06-02 |

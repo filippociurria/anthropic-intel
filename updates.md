@@ -4,6 +4,36 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Claude Fable 5 & Claude Mythos 5 — 2026-06-09
+- **What**: Claude Fable 5 (`claude-fable-5`) is the most capable widely released Claude model — Mythos-class capability with safety guardrails, 1M token context, 128k max output, always-on adaptive thinking, priced at $10/$50 per MTok; Claude Mythos 5 (`claude-mythos-5`) ships simultaneously for Project Glasswing participants with the same specs; `thinking.disabled` and manual `budget_tokens` are not supported on either model (returns 400); 30-day data retention required; new `"reasoning_extraction"` `stop_details.category` fires when a request attempts to extract model weights or outputs
+- **Situations**: frontier-intelligence coding, research, and long-horizon agentic tasks at roughly half the original Mythos Preview cost, large-document pipelines benefiting from 1M context and up to 128k output tokens by default, auditing integrations that pass `thinking.disabled` or manual `budget_tokens` before migrating to Fable 5
+- **Tags**: [dev, product]
+- **Source**: https://www.anthropic.com/news/claude-fable-5-mythos-5
+
+## Managed Agents Scheduled Deployments — 2026-06-09
+- **What**: Claude Managed Agents now supports cron-based scheduled sessions, running agent tasks on a defined schedule without requiring you to manage your own scheduler; `session.thread_*` webhook events also gain a `session_thread_id` field for correlating events across multi-agent threads
+- **Situations**: running nightly data-processing or compliance-audit agents on a cron without building scheduler infrastructure, replacing cron + custom glue code with a native Managed Agents scheduling feature, routing webhook notifications per multi-agent thread in orchestration pipelines
+- **Tags**: [dev, automation]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Managed Agents Vault Env Var Credentials — 2026-06-09
+- **What**: Managed Agents vaults now support environment variable credentials, enabling secure injection of secrets into the agent sandbox for any service that authenticates via env vars (CLIs, SDKs, custom tools)
+- **Situations**: giving a Managed Agent secure access to third-party CLIs or SDKs without hardcoding credentials in prompts, rotating secrets centrally in the vault without modifying agent code, extending vault support beyond OAuth to any env-var-authenticated tool
+- **Tags**: [dev, automation]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
+## Apple Foundation Models Framework Swift Package — 2026-06-09
+- **What**: New official Swift package makes Claude available as a server-side `LanguageModel` in Apple's Foundation Models framework (iOS/iPadOS/macOS/visionOS/watchOS 27), conforming to the same `LanguageModelSession` API used for Apple's on-device model so the same session code works with either provider
+- **Situations**: SwiftUI apps routing complex queries to Claude while keeping simpler ones on-device without changing session code, Apple developers benchmarking on-device vs. Claude quality within the same Swift codebase, swapping between Claude and Apple's on-device model by updating a single SPM dependency
+- **Tags**: [dev]
+- **Source**: https://platform.claude.com/docs/en/cli-sdks-libraries/libraries/apple-foundation-models
+
+## Self-hosted Runner `post-session` Lifecycle Hook — 2026-06-08
+- **What**: Claude Code self-hosted runner sessions gain a `post-session` hook that fires after the session ends but before the workspace is deleted, enabling snapshot of uncommitted work or log export
+- **Situations**: capturing uncommitted changes before a self-hosted runner workspace is cleaned up, exporting session logs or build artifacts to an external store at the end of each run, building audit or backup pipelines for self-hosted Claude Code runner environments
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## `claude agents --json` `--all` Flag + `id`/`state` Fields — 2026-06-08
 - **What**: `claude agents --json` gains `--all` to include completed sessions alongside active ones; each session entry now exposes `id` and `state` fields for scripting
 - **Situations**: building dashboards or scripts that query both live and recently completed background sessions, filtering or routing sessions by state in automated pipelines, referencing sessions reliably by `id` instead of parsing display names

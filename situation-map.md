@@ -122,11 +122,19 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Rotating Managed Agents secrets centrally in the vault without modifying agent code | Managed Agents Vault Env Var Credentials | 2026-06-09 |
 | Capturing uncommitted changes before a self-hosted runner workspace is cleaned up | Self-hosted Runner `post-session` Hook | 2026-06-08 |
 | Exporting Claude Code session logs or artifacts to an external store at session end in self-hosted runner | Self-hosted Runner `post-session` Hook | 2026-06-08 |
+| Quickly finding a plugin by keyword in a large or org-curated Claude Code marketplace | Plugin Marketplace Search Bar | 2026-06-10 |
+| Filtering third-party plugin catalogs by name or keyword without scrolling | Plugin Marketplace Search Bar | 2026-06-10 |
+| Orchestrating nested parallel research or coding pipelines across multiple tiers of sub-agents | Sub-agents Spawning Sub-agents (5-Level Nesting) | 2026-06-10 |
+| Building hierarchical agent architectures (planner → module agents → file agents) in Claude Code | Sub-agents Spawning Sub-agents (5-Level Nesting) | 2026-06-10 |
+| Decomposing very large tasks beyond a single Claude Code fan-out layer using nested sub-agents | Sub-agents Spawning Sub-agents (5-Level Nesting) | 2026-06-10 |
 
 ## Development & API
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Production apps that must return a response even when Fable 5 refuses a borderline request | `fallbacks` Parameter for Fable 5 Refusals | 2026-06-09 |
+| Building tiered safety policies (Fable 5 → Opus 4.8) without custom refusal-retry logic | `fallbacks` Parameter for Fable 5 Refusals | 2026-06-09 |
+| Reducing user-visible refusal errors in high-volume apps using Fable 5 | `fallbacks` Parameter for Fable 5 Refusals | 2026-06-09 |
 | Frontier-intelligence coding, research, and long-horizon agentic tasks at roughly half the original Mythos Preview cost | Claude Fable 5 & Mythos 5 | 2026-06-09 |
 | Large-document pipelines needing 1M context and up to 128k output tokens from Claude's most capable model | Claude Fable 5 & Mythos 5 | 2026-06-09 |
 | Auditing integrations that pass `thinking.disabled` or manual `budget_tokens` before migrating to Fable 5 | Claude Fable 5 & Mythos 5 | 2026-06-09 |

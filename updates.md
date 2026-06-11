@@ -4,6 +4,24 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Plugin Marketplace Search Bar — 2026-06-10
+- **What**: The `/plugin` browse pane now includes a keyword search bar for filtering plugins within a marketplace, replacing scroll-only navigation
+- **Situations**: quickly locating a specific plugin in a large or org-curated marketplace, filtering by keyword when browsing third-party plugin catalogs that have grown over time, reducing friction when installing plugins from busy marketplaces
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Sub-agents Spawning Sub-agents (5-Level Nesting) — 2026-06-10
+- **What**: Claude Code sub-agents can now themselves spawn sub-agents, up to 5 levels deep, enabling true hierarchical multi-agent architectures within a single `claude agents` session tree
+- **Situations**: orchestrating nested parallel research pipelines where each agent fans out its own sub-tasks, building hierarchical coding agents (planner → module agents → file-level agents), decomposing very large tasks across multiple tiers of parallelism beyond a single fan-out layer
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `fallbacks` Parameter for Fable 5 Refusals — 2026-06-09
+- **What**: New opt-in `fallbacks` beta parameter (Claude API and Claude Platform on AWS; not supported on Message Batches API) re-runs a Fable 5 request that returned `stop_reason: "refusal"` on a specified fallback model, billed at that model's rates — so apps can continue producing output when Fable 5's safety classifiers decline a request
+- **Situations**: production apps that must return a response even when Fable 5 refuses a borderline request, building tiered safety policies (e.g., Fable 5 → Opus 4.8) without custom retry logic, reducing user-visible refusal errors in high-volume consumer applications using Fable 5
+- **Tags**: [dev]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
 ## Claude Fable 5 & Claude Mythos 5 — 2026-06-09
 - **What**: Claude Fable 5 (`claude-fable-5`) is the most capable widely released Claude model — Mythos-class capability with safety guardrails, 1M token context, 128k max output, always-on adaptive thinking, priced at $10/$50 per MTok; Claude Mythos 5 (`claude-mythos-5`) ships simultaneously for Project Glasswing participants with the same specs; `thinking.disabled` and manual `budget_tokens` are not supported on either model (returns 400); 30-day data retention required; new `"reasoning_extraction"` `stop_details.category` fires when a request attempts to extract model weights or outputs
 - **Situations**: frontier-intelligence coding, research, and long-horizon agentic tasks at roughly half the original Mythos Preview cost, large-document pipelines benefiting from 1M context and up to 128k output tokens by default, auditing integrations that pass `thinking.disabled` or manual `budget_tokens` before migrating to Fable 5

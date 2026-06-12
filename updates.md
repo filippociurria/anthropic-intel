@@ -4,6 +4,24 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Fable 5 Frontier LLM Safeguards Made Visible — 2026-06-11
+- **What**: After community backlash over Fable 5 silently downgrading requests related to frontier AI development (steering to less capable models without notification), Anthropic updated the safeguards: flagged requests now visibly fall back to Opus 4.8 (shown to users), and API requests return an explicit refusal reason; Anthropic apologized for the original silent approach
+- **Situations**: AI researchers using Fable 5 who need to detect when their requests are flagged and redirected, production app developers who need to surface accurate model identity and refusal reasons in their UX, organizations evaluating Fable 5 behavior before deployment
+- **Tags**: [dev, product]
+- **Source**: https://fortune.com/2026/06/11/anthropic-fable-5-silent-downgrade-backlash-national-security-transparency/
+
+## Bedrock AWS Region Auto-Detection from `~/.aws` Config — 2026-06-10
+- **What**: Claude Code on Amazon Bedrock now reads the AWS region from `~/.aws` config files when `AWS_REGION` isn't set, following standard AWS SDK precedence; `/status` shows where the region setting came from
+- **Situations**: Bedrock users who configure region via standard AWS profiles rather than env vars, diagnosing region misconfiguration quickly via `/status`, standardizing Claude Code Bedrock setup to use standard AWS credential files instead of env vars
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `GET /v1/environments/{id}/work` on Claude Platform on AWS — 2026-06-10
+- **What**: The self-hosted sandbox endpoint for listing pending work items is now available on Claude Platform on AWS, authorized by the new `GetEnvironment` IAM action
+- **Situations**: AWS-based self-hosted sandbox operators querying pending agent work items via the AWS endpoint, setting up IAM permissions for sandbox work polling on Claude Platform on AWS, extending self-hosted sandbox monitoring to AWS-native deployments
+- **Tags**: [dev, automation]
+- **Source**: https://platform.claude.com/docs/en/release-notes/overview
+
 ## Plugin Marketplace Search Bar — 2026-06-10
 - **What**: The `/plugin` browse pane now includes a keyword search bar for filtering plugins within a marketplace, replacing scroll-only navigation
 - **Situations**: quickly locating a specific plugin in a large or org-curated marketplace, filtering by keyword when browsing third-party plugin catalogs that have grown over time, reducing friction when installing plugins from busy marketplaces

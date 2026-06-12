@@ -122,6 +122,13 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Rotating Managed Agents secrets centrally in the vault without modifying agent code | Managed Agents Vault Env Var Credentials | 2026-06-09 |
 | Capturing uncommitted changes before a self-hosted runner workspace is cleaned up | Self-hosted Runner `post-session` Hook | 2026-06-08 |
 | Exporting Claude Code session logs or artifacts to an external store at session end in self-hosted runner | Self-hosted Runner `post-session` Hook | 2026-06-08 |
+| AI researchers using Fable 5 who need to detect when their requests are flagged and redirected to Opus 4.8 | Fable 5 Frontier LLM Safeguards Made Visible | 2026-06-11 |
+| Production apps using Fable 5 needing to surface accurate model identity and refusal reasons in their UX | Fable 5 Frontier LLM Safeguards Made Visible | 2026-06-11 |
+| Evaluating Fable 5 behavior before deployment to understand when requests may be rerouted | Fable 5 Frontier LLM Safeguards Made Visible | 2026-06-11 |
+| Bedrock users who configure AWS region via standard AWS profiles rather than `AWS_REGION` env var | Bedrock AWS Region Auto-Detection from `~/.aws` Config | 2026-06-10 |
+| Diagnosing Claude Code Bedrock region misconfiguration quickly via `/status` | Bedrock AWS Region Auto-Detection from `~/.aws` Config | 2026-06-10 |
+| AWS-based self-hosted sandbox operators querying pending agent work items via the Claude Platform on AWS endpoint | `GET /v1/environments/{id}/work` on Claude Platform on AWS | 2026-06-10 |
+| Setting up IAM permissions for self-hosted sandbox work polling on Claude Platform on AWS | `GET /v1/environments/{id}/work` on Claude Platform on AWS | 2026-06-10 |
 | Quickly finding a plugin by keyword in a large or org-curated Claude Code marketplace | Plugin Marketplace Search Bar | 2026-06-10 |
 | Filtering third-party plugin catalogs by name or keyword without scrolling | Plugin Marketplace Search Bar | 2026-06-10 |
 | Orchestrating nested parallel research or coding pipelines across multiple tiers of sub-agents | Sub-agents Spawning Sub-agents (5-Level Nesting) | 2026-06-10 |

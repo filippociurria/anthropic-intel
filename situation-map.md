@@ -134,11 +134,20 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Orchestrating nested parallel research or coding pipelines across multiple tiers of sub-agents | Sub-agents Spawning Sub-agents (5-Level Nesting) | 2026-06-10 |
 | Building hierarchical agent architectures (planner → module agents → file agents) in Claude Code | Sub-agents Spawning Sub-agents (5-Level Nesting) | 2026-06-10 |
 | Decomposing very large tasks beyond a single Claude Code fan-out layer using nested sub-agents | Sub-agents Spawning Sub-agents (5-Level Nesting) | 2026-06-10 |
+| Ensuring users cannot bypass managed model allowlists via env vars or fast-mode toggles | `enforceAvailableModels` Managed Setting | 2026-06-12 |
+| Strictly auditing which models run across an org's Claude Code deployments | `enforceAvailableModels` Managed Setting | 2026-06-12 |
+| Enforcing compliance-approved model lists where previous soft enforcement was insufficient | `enforceAvailableModels` Managed Setting | 2026-06-12 |
+| Bedrock users with short-lived IAM credentials (< 1 hour) that previously expired mid-session | Bedrock Credential Cache Until Expiration | 2026-06-12 |
+| Reducing unnecessary credential refresh calls in high-throughput Bedrock Claude Code environments | Bedrock Credential Cache Until Expiration | 2026-06-12 |
 
 ## Development & API
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Teams working in non-English languages who want session history labeled in their language | Session Titles in Conversation Language | 2026-06-12 |
+| Pinning a consistent title language across a multilingual Claude Code team environment | Session Titles in Conversation Language | 2026-06-12 |
+| Understanding token spend across VSCode Claude Code sessions vs. terminal sessions | VSCode Usage Attribution in `/usage` | 2026-06-12 |
+| Diagnosing cache miss rates or high subagent costs specifically inside VSCode Claude Code | VSCode Usage Attribution in `/usage` | 2026-06-12 |
 | Production apps that must return a response even when Fable 5 refuses a borderline request | `fallbacks` Parameter for Fable 5 Refusals | 2026-06-09 |
 | Building tiered safety policies (Fable 5 → Opus 4.8) without custom refusal-retry logic | `fallbacks` Parameter for Fable 5 Refusals | 2026-06-09 |
 | Reducing user-visible refusal errors in high-volume apps using Fable 5 | `fallbacks` Parameter for Fable 5 Refusals | 2026-06-09 |
@@ -261,6 +270,10 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Enterprises assessing Anthropic's public-market obligations before multi-year platform commitments | Anthropic IPO S-1 Filing | 2026-06-11 |
+| Developers tracking Anthropic's financial trajectory and IPO timeline vs. OpenAI | Anthropic IPO S-1 Filing | 2026-06-11 |
+| Regulated-industry enterprises (banking, aviation) evaluating Claude via a vetted IT services integrator | DXC Technology–Anthropic Partnership | 2026-06-11 |
+| Procurement teams assessing DXC as a Claude implementation partner for regulated deployments | DXC Technology–Anthropic Partnership | 2026-06-11 |
 | Enterprises finding pre-vetted Claude consulting/SI partners by tier and region | Claude Partner Network Services Track & Partner Hub | 2026-06-03 |
 | Consulting firms tracking certification counts and deployments to qualify for tier promotion | Claude Partner Network Services Track & Partner Hub | 2026-06-03 |
 | Channel partners planning their Claude practice around the January/July tier review cycle | Claude Partner Network Services Track & Partner Hub | 2026-06-03 |
@@ -271,6 +284,8 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Policy and communications teams framing AI value against public anxiety about job displacement | Anthropic Public Record Survey Results | 2026-06-12 |
+| Enterprise AI adoption programs using public sentiment data to inform deployment messaging | Anthropic Public Record Survey Results | 2026-06-12 |
 | Catching injection flaws and insecure patterns in code before they reach a PR | Security Guidance Plugin for Claude Code | 2026-05-27 |
 | Automatically reviewing every AI-generated code change for ~25 vulnerability classes | Security Guidance Plugin for Claude Code | 2026-05-27 |
 | Running instant, zero-cost vulnerability scanning on every file save in Claude Code | Security Guidance Plugin for Claude Code | 2026-05-27 |

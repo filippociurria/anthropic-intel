@@ -4,6 +4,48 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Anthropic Public Record Survey Results — 2026-06-12
+- **What**: Anthropic published its first Public Record report: a survey of ~52,000 Americans showing 48% ranked curing diseases as a top AI hope, 64% cited AI-induced job loss as their top fear, and 70%+ support government regulation of AI — bipartisan
+- **Situations**: policy and communications teams framing Claude's value proposition against public AI anxiety, enterprise AI adoption programs preparing employees for AI-related concerns, product teams using public sentiment data to inform responsible AI deployment messaging
+- **Tags**: [research, product]
+- **Source**: https://www.anthropic.com/news/anthropic-public-record
+
+## `enforceAvailableModels` Managed Setting — 2026-06-12
+- **What**: New `enforceAvailableModels` managed setting strictly constrains Claude Code's Default model to the `availableModels` allowlist; a Default that resolves to a blocked model falls back to the first allowed; user or project settings can no longer widen a managed allowlist; `/fast` and `ANTHROPIC_DEFAULT_*_MODEL` env vars cannot redirect to blocked models
+- **Situations**: enterprises ensuring users cannot bypass model allowlists even via env vars or fast-mode toggles, strictly auditing which models run across an org's Claude Code deployments, enforcing compliance-approved model lists where the previous soft enforcement was insufficient
+- **Tags**: [dev, automation]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Session Titles in Conversation Language — 2026-06-12
+- **What**: Claude Code now generates session titles in the language of the conversation; a new `language` setting pins a specific language for session titles across all sessions
+- **Situations**: teams working in non-English languages who want session history labeled in their language, pinning a consistent title language across a multilingual team environment, improving session discoverability in `/resume` for non-English conversations
+- **Tags**: [dev, product]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Bedrock Credential Cache Until Expiration (`awsCredentialExport`) — 2026-06-12
+- **What**: AWS credentials from `awsCredentialExport` in Claude Code are now cached until their actual `Expiration` timestamp instead of a fixed 1-hour TTL, preventing premature expiry for short-lived credentials and unnecessary refreshes for long-lived ones
+- **Situations**: Bedrock users with short-lived IAM role credentials (< 1 hour) that previously expired mid-session, reducing unnecessary credential refresh calls in high-throughput Bedrock Claude Code environments, using `awsCredentialExport` scripts that produce variable-lifetime credentials
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## VSCode Usage Attribution in `/usage` — 2026-06-12
+- **What**: The Claude Code `/usage` dialog now shows per-environment attribution for VSCode sessions: cache misses, long context, subagents, and per-skill/agent/plugin/MCP breakdown over the last 24h or 7d
+- **Situations**: understanding token spend across VSCode Claude Code sessions vs. terminal sessions, diagnosing cache miss rates or high subagent costs inside VSCode specifically, auditing per-plugin and per-MCP usage broken down by IDE environment
+- **Tags**: [dev, analytics]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## Anthropic IPO S-1 Filing — 2026-06-11
+- **What**: Anthropic confidentially filed its S-1 with the SEC, entering the IPO race ahead of OpenAI, at a $965B valuation with a $47B annualized revenue run rate as of May 2026 and approaching its first profitable quarter
+- **Situations**: enterprises assessing Anthropic's long-term public-market obligations before multi-year platform commitments, developers tracking Anthropic's financial trajectory as it moves toward public listing, comparing Anthropic's IPO timing against OpenAI's as both companies race to go public
+- **Tags**: [product]
+- **Source**: https://www.nbcnews.com/business/corporations/anthropic-files-ipo-openai-rcna347897
+
+## DXC Technology–Anthropic Partnership — 2026-06-11
+- **What**: DXC Technology announced it will integrate Claude into mission-critical enterprise systems for banks, airlines, and other regulated industries, expanding Claude's reach through a major global IT services provider
+- **Situations**: regulated-industry enterprises (banking, aviation) evaluating Claude deployments via a vetted IT services integrator, procurement teams assessing DXC as a Claude implementation partner for compliant regulated deployments, tracking Anthropic's growing enterprise IT services ecosystem
+- **Tags**: [product]
+- **Source**: https://www.buildfastwithai.com/blogs/ai-news-today-june-11-2026
+
 ## Fable 5 Frontier LLM Safeguards Made Visible — 2026-06-11
 - **What**: After community backlash over Fable 5 silently downgrading requests related to frontier AI development (steering to less capable models without notification), Anthropic updated the safeguards: flagged requests now visibly fall back to Opus 4.8 (shown to users), and API requests return an explicit refusal reason; Anthropic apologized for the original silent approach
 - **Situations**: AI researchers using Fable 5 who need to detect when their requests are flagged and redirected, production app developers who need to surface accurate model identity and refusal reasons in their UX, organizations evaluating Fable 5 behavior before deployment

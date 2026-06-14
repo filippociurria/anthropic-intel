@@ -139,11 +139,16 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 | Enforcing compliance-approved model lists where previous soft enforcement was insufficient | `enforceAvailableModels` Managed Setting | 2026-06-12 |
 | Bedrock users with short-lived IAM credentials (< 1 hour) that previously expired mid-session | Bedrock Credential Cache Until Expiration | 2026-06-12 |
 | Reducing unnecessary credential refresh calls in high-throughput Bedrock Claude Code environments | Bedrock Credential Cache Until Expiration | 2026-06-12 |
+| Configuring which URLs appear as footer link badges in Claude Code via regex patterns | `footerLinksRegexes` Setting | 2026-06-12 |
+| Admins standardizing Claude Code footer badge display org-wide via managed settings | `footerLinksRegexes` Setting | 2026-06-12 |
+| Disabling mouse-wheel scroll acceleration in Claude Code fullscreen mode | `wheelScrollAccelerationEnabled` Setting | 2026-06-12 |
 
 ## Development & API
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Developers and enterprises relying on Fable 5/Mythos 5 APIs now suspended by US export control directive | Fable 5 & Mythos 5 Suspended by US Export Control | 2026-06-13 |
+| Production systems recently migrated to Fable 5 needing a contingency fallback to Opus 4.8 | Fable 5 & Mythos 5 Suspended by US Export Control | 2026-06-13 |
 | Teams working in non-English languages who want session history labeled in their language | Session Titles in Conversation Language | 2026-06-12 |
 | Pinning a consistent title language across a multilingual Claude Code team environment | Session Titles in Conversation Language | 2026-06-12 |
 | Understanding token spend across VSCode Claude Code sessions vs. terminal sessions | VSCode Usage Attribution in `/usage` | 2026-06-12 |
@@ -270,6 +275,7 @@ Maps practical situations → relevant Anthropic features. Updated by the intel 
 
 | Situation | Feature | Date |
 |-----------|---------|------|
+| Teams tracking AI export control policy risk before committing to frontier-model deployments | Fable 5 & Mythos 5 Suspended by US Export Control | 2026-06-13 |
 | Enterprises assessing Anthropic's public-market obligations before multi-year platform commitments | Anthropic IPO S-1 Filing | 2026-06-11 |
 | Developers tracking Anthropic's financial trajectory and IPO timeline vs. OpenAI | Anthropic IPO S-1 Filing | 2026-06-11 |
 | Regulated-industry enterprises (banking, aviation) evaluating Claude via a vetted IT services integrator | DXC Technology–Anthropic Partnership | 2026-06-11 |

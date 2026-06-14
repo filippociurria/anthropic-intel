@@ -4,6 +4,24 @@ Newest entries first. Managed by the intel scraper. Do not edit manually.
 
 ---
 
+## Fable 5 & Mythos 5 Suspended by US Export Control Directive — 2026-06-13
+- **What**: US Commerce Secretary Howard Lutnick issued an export control directive on June 12, 2026 ordering Anthropic to suspend all access to Fable 5 and Mythos 5 for any foreign national (inside or outside the US, including Anthropic's own foreign-national employees); Anthropic abruptly disabled both models for all customers globally to ensure compliance; all other Claude models remain unaffected; Anthropic disputes the action, attributing it to "a narrow potential jailbreak" involving "a small number of previously known, minor vulnerabilities" and is working to restore access
+- **Situations**: developers and enterprises relying on Fable 5/Mythos 5 APIs who are now blocked pending restoration, production systems that recently migrated to Fable 5 needing a contingency fallback to Opus 4.8 or earlier models, teams tracking AI export control policy risk before committing to frontier-model deployments
+- **Tags**: [dev, product]
+- **Source**: https://www.anthropic.com/news/fable-mythos-access
+
+## `footerLinksRegexes` Setting — 2026-06-12
+- **What**: New `footerLinksRegexes` setting in Claude Code configures which URLs appear as link badges in the footer row via regex patterns, available in user or managed settings
+- **Situations**: enterprise deployments that want to surface specific internal URLs (e.g. ticket or PR links) as footer badges, teams suppressing irrelevant links from the Claude Code footer, admins standardizing footer badge display across an org via managed settings
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
+## `wheelScrollAccelerationEnabled` Setting — 2026-06-12
+- **What**: New `wheelScrollAccelerationEnabled` setting lets users disable mouse-wheel scroll acceleration in Claude Code's fullscreen mode for consistent, linear scroll speed
+- **Situations**: users who find variable scroll acceleration disorienting when reading long Claude Code outputs, standardizing scroll behavior for demo or shared-screen sessions, personal preference for linear scroll velocity in fullscreen mode
+- **Tags**: [dev]
+- **Source**: https://code.claude.com/docs/en/changelog
+
 ## Anthropic Public Record Survey Results — 2026-06-12
 - **What**: Anthropic published its first Public Record report: a survey of ~52,000 Americans showing 48% ranked curing diseases as a top AI hope, 64% cited AI-induced job loss as their top fear, and 70%+ support government regulation of AI — bipartisan
 - **Situations**: policy and communications teams framing Claude's value proposition against public AI anxiety, enterprise AI adoption programs preparing employees for AI-related concerns, product teams using public sentiment data to inform responsible AI deployment messaging
